@@ -12,7 +12,10 @@ import java.util.HashMap;
 
 import PORT.port;
 import cn.hsd.student.R;
+import cn.hsd.student.activity.Json.json;
+import cn.hsd.student.activity.service.SDS_Httpclient;
 import cn.hsd.student.activity.service.SDS_ZMHandler;
+import cn.hsd.tutor.model.stu_log;
 
 public class VistlogActivity extends AppCompatActivity {
     private EditText et1;
@@ -23,7 +26,7 @@ public class VistlogActivity extends AppCompatActivity {
     private SimpleAdapter simp_ada;
     private ArrayList<HashMap<String,Object>> arr_list;
 
-    SDS_ZMHandler handler = new SDS_ZMHandler() {
+    SDS_ZMHandler handler = new  SDS_ZMHandler() {
         @Override
         public void onSuccess(String content) {
 
@@ -52,13 +55,13 @@ public class VistlogActivity extends AppCompatActivity {
     }
     public void show_List_Logcat(){
 
-        arr_list = new ArrayList<HashMap<String,Object>>();
+        arr_list = new ArrayList<>();
         for(int i = 0;i<20;i++){
-            HashMap map = new HashMap<String,Object>();
+            HashMap map = new HashMap<>();
             map.put("key","实习生日志"+i);
             arr_list.add(map);
         }
-        //实习日志
+
         lv1 =(ListView) this.findViewById(R.id.wqj_log_List);
         simp_ada = new SimpleAdapter(this, arr_list, R.layout.list
                 ,new String[]{"key"},new int[]{R.id.wqj_log_list});
@@ -69,6 +72,16 @@ public class VistlogActivity extends AppCompatActivity {
         new Thread() {
             public void run() {
                 String path = port.port+"/WQJServices/wqjservlet";
+                studentnumber= et1.toString().trim();
+                stu_log  log = new stu_log();
+                log.setStudent_no(studentnumber);
+                json<stu_log> json = new json<>();
+                String infoResult = json.ObjectToJson1(log);
+                SDS_Httpclient conn = new SDS_Httpclient();
+                conn.Postclient(path, infoResult, handler);
+
+
+
 
 
 
