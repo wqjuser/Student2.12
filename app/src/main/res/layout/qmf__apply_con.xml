@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F2F2">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="#d5e9fd"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/qmf_applyreturn"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="50dip"
+            android:background="#d5e9fd"
+            android:layout_marginTop="7px"
+            android:onClick="qmf_ApplyReturnM"
+            android:src="@drawable/qmf_return" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="2"
+            android:layout_marginTop="4dip"
+            android:background="#d5e9fd"
+            android:text="申请状态"
+            android:textColor="#000"
+            android:layout_height="fill_parent"
+            android:textSize="25dip"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="12"
+        android:orientation="horizontal">
+
+
+        <ListView
+            android:id="@+id/qmf_applylv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:background="#F2ECE1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/qmf_applystateapply"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:text="申请"
+        android:background="#d5e9fd"
+        android:textColor="#000"
+        android:layout_marginRight="10dip"
+        android:layout_marginEnd="30dip"
+        android:layout_gravity="right"
+        android:textSize="20dip"
+        android:onClick="qmf_Applyapply"
+
+        />
+
+
+</LinearLayout>

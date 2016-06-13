@@ -1,0 +1,204 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="gxq.apply.ai2.Gxq_apply_message"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#d5e9fd">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="25dp"
+            android:background="#d5e9fd" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#d5e9fd"
+            android:text="假条"
+            android:textSize="25dp"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:textSize="25dp"
+            android:background="#d5e9fd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="申请人："
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/gxq_aqqlyname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="账户" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="申请导员"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/gxq_aqqly_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="申请时间："
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/apply_message_systemtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取当前系统时间"
+                android:textSize="20dp"
+                android:singleLine="true"
+                android:focusable="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始："
+                android:textSize="20dp" />
+            <!--<ImageButton-->
+            <!--android:id="@+id/apply_message_begintime"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:text="时间"-->
+            <!--android:background="@drawable/data1"-->
+            <!--android:onClick="apply_message_click"/>-->
+            <EditText
+                android:id="@+id/apply_message_begintimeshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入时间"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束："
+                android:textSize="20dp" />
+            <!--<ImageButton-->
+            <!--android:id="@+id/apply_message_overtime"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:text="时间"-->
+            <!--android:background="@drawable/data1"-->
+            <!--android:onClick="apply_message_click"/>-->
+            <EditText
+                android:id="@+id/apply_message_overtimeshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入时间"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:text="原因:"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/apply_message_because"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:textSize="20dp"
+            android:minLines="5"
+            android:background="@android:drawable/edit_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/apply_message_tijiao"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="提交"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:onClick="apply_message_click" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

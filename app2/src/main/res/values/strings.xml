@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Student</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="身份选择">
+        <item>学生</item>
+        <item>指导老师</item>
+        <item>辅导员</item>
+        <item>校级管理员</item>
+        <item>院级管理员</item>
+    </string-array>
+</resources>

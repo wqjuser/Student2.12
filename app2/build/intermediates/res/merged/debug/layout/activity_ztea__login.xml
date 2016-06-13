@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_login">
+
+
+    <RelativeLayout
+        android:id="@+id/wqj_zt_login_div"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dip"
+        android:layout_margin="15dip"
+
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/login_user_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            />
+        <EditText
+            android:id="@+id/username_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入身份证号"
+            android:layout_below="@id/login_user_input"
+            android:singleLine="true"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/login_password_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_edit"
+            android:layout_marginTop="3dp"
+            />
+        <EditText
+            android:id="@+id/password_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_password_input"
+            android:password="true"
+            android:hint="请输入密码"
+            android:singleLine="true"
+            android:inputType="textPassword" />
+
+        <Button
+            android:text="登录"
+            android:textColor="@android:color/holo_blue_bright"
+            android:id="@+id/wqj_zt_log_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_edit"
+            android:background="@drawable/blue_button" />
+        <TextView
+            android:layout_below="@id/wqj_zt_log_button"
+            android:id="@+id/wqj_zt_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="做好管理准备了吗"
+            android:textSize="30dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:gravity="center_horizontal"
+            />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wqj_zt_tv"
+            android:src="@drawable/wqj_stu_log"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

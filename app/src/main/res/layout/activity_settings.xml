@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3F6"
+    android:orientation="vertical">
+
+
+    <LinearLayout style="@style/wrap_layout">
+        <!-- 上圆角-->
+        <LinearLayout style="@style/top_layout"
+            android:onClick="xinxi"
+            android:id="@+id/xinxi_on">
+
+            <TextView
+                android:id="@+id/xinxi_set"
+                android:onClick="xinxi"
+                style="@style/usertext"
+                android:text="信息修改" />
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View style="@style/bg_line" />
+
+
+        <View style="@style/bg_line" />
+        <!-- 下圆角-->
+        <LinearLayout style="@style/bottom_layout"
+            android:id="@+id/about_us"
+            android:onClick="about_on">
+
+            <TextView
+                android:onClick="about_on"
+                android:id="@+id/about_tv"
+                style="@style/usertext"
+                android:text="关于我们" />
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

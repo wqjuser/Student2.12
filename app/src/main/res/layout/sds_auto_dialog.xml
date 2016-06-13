@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="总结"
+        android:inputType="textMultiLine"
+        android:minLines="8"
+        android:background="@android:drawable/edit_text"
+        android:maxLines="8"
+        android:scrollbars="vertical"
+        android:textSize="20dip"
+        android:gravity="top"
+        android:id="@+id/sds_sum_content_xianshi" />
+
+
+    <Button
+        android:id="@+id/sds_return"
+        android:onClick="back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="返回"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/shape" />
+
+</LinearLayout>

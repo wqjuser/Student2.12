@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\Android\\Projects\\Student2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_student_drawer.xml",
+        "source": "E:\\Android\\Projects\\Student2\\app\\src\\main\\res\\menu\\activity_student_drawer.xml"
+    },
+    {
+        "merged": "E:\\Android\\Projects\\Student2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\student.xml",
+        "source": "E:\\Android\\Projects\\Student2\\app\\src\\main\\res\\menu\\student.xml"
+    }
+]

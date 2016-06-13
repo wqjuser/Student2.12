@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Stu_logCat"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="日志" />
+
+        <item
+            android:id="@+id/Stu_Holiday"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="请假" />
+
+        <item
+            android:id="@+id/Stu_apply_good_Student"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="优秀实习生申请" />
+
+
+        <item
+            android:id="@+id/Stu_setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="设置" />
+
+    </group>
+
+    <item android:title="留言">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="辅导员留言" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="导师留言" />
+        </menu>
+    </item>
+
+</menu>

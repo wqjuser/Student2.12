@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context=".message.Qxx_WriteActivity">
+
+    <cn.hsd.student.message.Qxx_TopLine
+        android:id="@+id/qxx_writedate"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/shapetop"
+        android:gravity="center"
+        android:textColor="#ffff0000" />
+
+    <cn.hsd.student.message.Qxx_DrawLine
+        android:id="@+id/qxx_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:layout_below="@+id/qxx_writedate"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape2"
+        android:gravity="top"
+        android:lineSpacingExtra="3.0dip"
+        android:scrollbars="vertical"
+        android:textColor="#ff000000"
+        android:textSize="18.0sp" />
+
+    <Button
+        android:id="@+id/qxx_send"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/qxx_edittext"
+        android:layout_below="@+id/qxx_edittext"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/shape"
+        android:text="发送"
+        android:textColor="#000" />
+
+    <Button
+        android:id="@+id/qxx_cancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/qxx_send"
+        android:layout_alignLeft="@+id/qxx_edittext"
+        android:layout_below="@+id/qxx_edittext"
+        android:background="@drawable/shape"
+        android:text="取消"
+        android:textColor="#000000" />
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#F2F2F2"
+    tools:context=".activity.logcat.sds_Logcat_Activity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#D5E9FD"
+        android:id="@+id/logcat_xinde"
+
+        >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:textSize="25dp"
+            android:src="@drawable/sds_logcat_title"
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_below="@id/logcat_xinde"
+        >
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fff"
+            android:id="@+id/linearyout_list"
+            android:orientation="vertical"
+            android:layout_marginTop="2dip"
+            >
+            <ListView
+                android:id="@+id/logcat_list_xinde"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/logcat_xinde"
+                android:layout_weight="100"
+                android:background="#D5E9FD"
+                />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dip"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dip"
+                android:background="#D5E9FD"
+                >
+
+                <!--dfsdf -->
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="80dip"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:id="@+id/image1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="3"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:text="刷新日志"
+                        android:gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="80dip"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:id="@+id/image2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="3"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:text="发表日志"
+                        android:gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="80dip"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:id="@+id/image3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="3"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:text="删除日志"
+                        android:gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="80dip"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:id="@+id/image4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="3"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:text="首页"
+                        android:gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Qxx_ReplyActivity"
+        android:background="#F2F2F2" >
+
+        <cn.hsd.student.message.Qxx_TextViewLine
+            android:id="@+id/qxx_contentT"
+            android:layout_width="300.0dip"
+            android:layout_height="125dip"
+            android:layout_below="@+id/qxx_topT"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shapebody"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textColor="#ff000000"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/qxx_topT"
+            android:layout_width="300.0dip"
+            android:layout_height="25.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/shapetop"
+            android:gravity="left"
+            android:textColor="#ffff0000" />
+
+        <TextView
+            android:id="@+id/qxx_dateT"
+            android:layout_width="wrap_content"
+            android:layout_height="25.0dip"
+            android:layout_above="@+id/qxx_contentT"
+            android:layout_alignRight="@+id/qxx_contentT"
+            android:layout_marginRight="20dip"
+            android:focusable="false"
+            android:textColor="#ffff0000" />
+
+        <TextView
+            android:id="@+id/qxx_tv"
+            android:layout_width="300.0dip"
+            android:layout_height="25.0dip"
+            android:layout_below="@+id/qxx_contentT"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shapebottom" />
+
+        <cn.hsd.student.message.Qxx_TextViewLine
+            android:id="@+id/qxx_contentR"
+            android:layout_width="300.0dip"
+            android:layout_height="125dip"
+            android:layout_below="@+id/qxx_topR"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shapebody"
+            android:lineSpacingExtra="3.0dip"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textColor="#ff000000"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/qxx_topR"
+            android:layout_width="300.0dip"
+            android:layout_height="25.0dip"
+            android:layout_below="@+id/qxx_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shapetop"
+            android:gravity="left"
+            android:textColor="#ffff0000" />
+
+        <TextView
+            android:id="@+id/qxx_dateR"
+            android:layout_width="wrap_content"
+            android:layout_height="25.0dip"
+            android:layout_above="@+id/qxx_contentR"
+            android:layout_alignRight="@+id/qxx_contentR"
+            android:layout_marginRight="20dip"
+            android:focusable="false"
+            android:textColor="#ffff0000" />
+
+        <TextView
+            android:id="@+id/qxx_tv2"
+            android:layout_width="300.0dip"
+            android:layout_height="25.0dip"
+            android:layout_below="@+id/qxx_contentR"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shapebottom" />
+
+        <TextView
+            android:id="@+id/qxx_tv2"
+            android:layout_width="300.0dip"
+            android:layout_height="30dip"
+            android:layout_below="@+id/qxx_lin"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/auto_xml_logcat"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_height="40dip"
+        android:textSize="20dip"
+        android:text="我是实习生"
+        />
+
+    <TextView
+        android:layout_marginLeft="220dip"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:text=">"
+        />
+
+
+</LinearLayout>

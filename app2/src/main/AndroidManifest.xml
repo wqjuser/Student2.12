@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.hsd.student">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.login.wqj_ID_MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.logcat.sds_Logcat_Activity" />
+        <activity android:name=".activity.logcat.sds_Logcat_fabiaoLogcat" />
+        <activity android:name=".activity.login.wqj_FTea_LoginActivity" />
+        <activity android:name=".activity.login.wqj_Stu_LoginActivity" />
+        <activity android:name=".activity.login.wqj_YA_LoginActivity" />
+        <activity android:name=".activity.login.wqj_XA_LoginActivity" />
+        <activity
+            android:name=".activity.logcat.StudentActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity android:name=".activity.login.wqj_ZTea_LoginActivity"></activity>
+        <activity android:name=".activity.login.InfoActivity"></activity>
+    </application>
+
+</manifest>
