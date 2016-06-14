@@ -24,9 +24,9 @@ public class VistlogActivity extends AppCompatActivity {
     private String studentnumber;
     private String logcat;
     private SimpleAdapter simp_ada;
-    private ArrayList<HashMap<String,Object>> arr_list;
+    private ArrayList<HashMap<String, Object>> arr_list;
 
-    SDS_ZMHandler handler = new  SDS_ZMHandler() {
+    SDS_ZMHandler handler = new SDS_ZMHandler() {
         @Override
         public void onSuccess(String content) {
 
@@ -53,36 +53,34 @@ public class VistlogActivity extends AppCompatActivity {
 
 
     }
-    public void show_List_Logcat(){
+
+    public void show_List_Logcat() {
 
         arr_list = new ArrayList<>();
-        for(int i = 0;i<20;i++){
+        for (int i = 0; i < 20; i++) {
             HashMap map = new HashMap<>();
-            map.put("key","实习生日志"+i);
+            map.put("key", "实习生日志" + i);
             arr_list.add(map);
         }
 
-        lv1 =(ListView) this.findViewById(R.id.wqj_log_List);
+        lv1 = (ListView) this.findViewById(R.id.wqj_log_List);
         simp_ada = new SimpleAdapter(this, arr_list, R.layout.list
-                ,new String[]{"key"},new int[]{R.id.wqj_log_list});
-        lv1.setAdapter(simp_ada);}
+                , new String[]{"key"}, new int[]{R.id.wqj_log_list});
+        lv1.setAdapter(simp_ada);
+    }
 
     public void ensure() {
         studentnumber = et1.getText().toString().trim();
         new Thread() {
             public void run() {
-                String path = port.port+"/WQJServices/wqjservlet";
-                studentnumber= et1.toString().trim();
-                stu_log  log = new stu_log();
+                String path = port.port + "/WQJServices/wqjservlet";
+                studentnumber = et1.toString().trim();
+                stu_log log = new stu_log();
                 log.setStudent_no(studentnumber);
                 json<stu_log> json = new json<>();
                 String infoResult = json.ObjectToJson1(log);
                 SDS_Httpclient conn = new SDS_Httpclient();
                 conn.Postclient(path, infoResult, handler);
-
-
-
-
 
 
             }

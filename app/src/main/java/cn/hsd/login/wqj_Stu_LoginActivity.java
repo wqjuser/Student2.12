@@ -71,8 +71,7 @@ public class wqj_Stu_LoginActivity extends AppCompatActivity {
                     Intent intent1 = new Intent(wqj_Stu_LoginActivity.this, InfoActivity.class);
                     startActivity(intent1);
                 }
-            }
-            else  {
+            } else {
 
                 Toast.makeText(wqj_Stu_LoginActivity.this, "登陆失败，请检查你的用学号和密码并重新登录", Toast.LENGTH_LONG).show();
             }
