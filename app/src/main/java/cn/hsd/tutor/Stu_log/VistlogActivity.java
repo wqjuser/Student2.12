@@ -80,7 +80,8 @@ public class VistlogActivity extends AppCompatActivity {
                 json<stu_log> json = new json<>();
                 String infoResult = json.ObjectToJson1(log);
                 SDS_Httpclient conn = new SDS_Httpclient();
-                conn.Postclient(path, infoResult, handler);
+                conn.Postclient(path, infoResult, handler);//测试上传
+
 
 
             }
