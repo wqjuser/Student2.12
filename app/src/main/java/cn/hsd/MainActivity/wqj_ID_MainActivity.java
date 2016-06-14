@@ -87,6 +87,7 @@ public class wqj_ID_MainActivity extends Activity {
         //当用户不做选择时调用的该方法
         public void onNothingSelected(AdapterView<?> arg0) {
             Toast.makeText(wqj_ID_MainActivity.this, "您没有选择任何选项", Toast.LENGTH_SHORT).show();
+            //我只是想测试一下update
         }
     }
 
