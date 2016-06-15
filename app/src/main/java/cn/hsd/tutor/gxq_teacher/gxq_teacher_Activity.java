@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import PORT.port;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Json.json;
 import cn.hsd.student.activity.service.SDS_Httpclient;
@@ -39,47 +40,11 @@ public class gxq_teacher_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gxq_teacher_);
-      //  connectserv();
         list = new ArrayList<Map>();
         spinner_teacher = (Spinner) findViewById(R.id.spinner_teacher);
         qiandaoshow_gxq = (TextView) findViewById(R.id.qidaoshow_gxq);
         backList = new ArrayList<Signin_class>();
-//
-//        Signin_class data = new Signin_class();
-//        data.setStudent_name("aaa");
-//        data.setSign_address("哈尔滨师范大学");
-//        data.setSign_time("2016.10.55");
-//
-//        Signin_class data1 = new Signin_class();
-//        data1.setStudent_name("bbb");
-//        data1.setSign_address("北京师范大学");
-//        data1.setSign_time("2016.18.55");
-//
-//        Signin_class data2 = new Signin_class();
-//        data2.setStudent_name("ccc");
-//        data2.setSign_address("长春师范大学");
-//        data2.setSign_time("2016.08.55");
-//
-//        shishiList.add(data);
-//        shishiList.add(data1);
-//        shishiList.add(data2);
-//        shishiList.add(data2);
-//
-//  //      listgxq.add("请刷新数据");
 
-//         spinner_teacher.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                String aa = listgxq.get(position);
-//                String bb;
-//                bb =   diaoyong(shishiList,aa);
-//                qiandaoshow_gxq.setText(bb);
-//            }
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
 
     }
 
@@ -119,12 +84,9 @@ public class gxq_teacher_Activity extends AppCompatActivity {
 public void connectserv(){
     new Thread(){
         public void run(){
-            String path = "http://192.168.191.1:8080/MyHsd/xsxs";
+            String path = port.port+"/GXQServices/xsxs";
             conn = new SDS_Httpclient();
-//            Signin_class data = new Signin_class();
-//            json<Signin_class> dataVerture = new json<Signin_class>();
-//            String returnJson = dataVerture.ObjectToJson1(data);
-//            String returnJson ="";
+
              conn.Postclient(path,"",gxq_zmhandler);
         }
     }.start();
@@ -132,12 +94,12 @@ public void connectserv(){
     public void connect(){
         new Thread(){
             public void run(){
-                String path = "http://192.168.191.1:8080/MyHsd/gxqxsxs";
+                String path = port.port+"/GXQServices/gxqxsxs";
                 conn = new SDS_Httpclient();
                 Signin_class data = new Signin_class();
                 json<Signin_class> dataVerture = new json<Signin_class>();
                 String returnJson = dataVerture.ObjectToJson1(data);
-//            String returnJson ="";
+
                 conn.Postclient(path,returnJson,gxq_conhandler);
             }
         }.start();

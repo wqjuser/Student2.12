@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import PORT.port;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Json.json;
 import cn.hsd.student.activity.service.SDS_Httpclient;
@@ -80,76 +81,7 @@ public class Apply_gxqshow_Activity extends AppCompatActivity {
                 }
             }
         });
-      //初始化listgxq1数据....................................................................................
-//        listgxq1.add("是非");
-//        listgxq1.add("李凤玉");
-//        listgxq1.add("自己");
-       //初始化List1数据
-//        Gxq_apply_student data = new Gxq_apply_student();
-//        data.setCounserlor_name("翟德斌");
-//        data.setStudent_name("是非");
-//        data.setLeave_begin("2016.5.1");
-//        data.setLeave_end("2016.5.2");
-//        data.setLeave_content("宝宝生病了");
-//        data.setLeave_check("未处理");
-//        data.setLeave_id(1);
-//        data.setCreate_time("今天");
-//
-//
-//        Gxq_apply_student data1 = new Gxq_apply_student();
-//        data1.setCounserlor_name("检讨");
-//        data1.setStudent_name("李凤玉");
-//        data1.setLeave_begin("2016.8.1");
-//        data1.setLeave_end("2016.7.2");
-//        data1.setLeave_content("宝宝的姐姐生病了");
-//        data1.setLeave_check("未处理");
-//        data1.setLeave_id(2);
-//        data1.setCreate_time("明天");
-//
-//        Gxq_apply_student data3 = new Gxq_apply_student();
-//        data3.setCounserlor_name("翟德斌");
-//        data3.setStudent_name("李凤玉");
-//        data3.setLeave_begin("2016.6.1");
-//        data3.setLeave_end("2016.7.2");
-//        data3.setLeave_content("呵呵打");
-//        data3.setLeave_check("未处理");
-//        data3.setLeave_id(3);
-//        data3.setCreate_time("后天");
-//
-//        Gxq_apply_student data2 = new Gxq_apply_student();
-//        data2.setCounserlor_name("是非");
-//        data2.setStudent_name("自己");
-//        data2.setLeave_begin("2016.5.1.1");
-//        data2.setLeave_end("2016.5.2");
-//        data2.setLeave_content("宝宝的宝宝的宝宝生病了");
-//        data2.setLeave_check("未处理");
-//        data2.setLeave_id(4);
-//        data2.setCreate_time("大后天");
-//
-//        shishiList1.add(data);
-//        shishiList1.add(data1);
-//        shishiList1.add(data2);
-//        shishiList1.add(data2);
-//        shishiList1.add(data3);
-//        shishiList1.add(data3);
-        //..........................................................................................................................
-//        ArrayAdapter<String> apply_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listgxq1);
-//        applyshow.setAdapter(apply_adapter);
-//        applyshow.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//            //    Toast.makeText(Apply_gxqshow_Activity.this, "你点击的是:"+listgxq1.get(position), Toast.LENGTH_SHORT).show();
-//                //spinner = apply_spinner[position];
-//                String aa = listgxq1.get(position);
-//                dataList1 = diaoyong(shishiList1,aa);
-//                adapter1.notifyDataSetChanged();
-//            }
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-        //--------------------------------------------------------------------------------------------------------------------------------..
+
         adapter1 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_list_item_1, dataList1);
         applyshow_list.setAdapter(adapter1);
@@ -215,7 +147,7 @@ public class Apply_gxqshow_Activity extends AppCompatActivity {
     public void connect_tijiao(){
         new Thread(){
             public void run(){
-                String path = "http://192.168.191.1:8080/MyHsd/submitxsxs";
+                String path = port.port+"/GXQServices/submitxsxs";
                 conn = new SDS_Httpclient();
                Gxq_apply_student data = new Gxq_apply_student();
                 data.setLeave_id(result_id);
@@ -230,7 +162,7 @@ public class Apply_gxqshow_Activity extends AppCompatActivity {
 public void connect_studentname(){
     new Thread(){
         public void run(){
-            String path = "http://192.168.191.1:8080/MyHsd/xsxs";
+            String path = port.port+"/GXQServices/xsxs";
             conn = new SDS_Httpclient();
 //            Signin_class data = new Signin_class();
 //            json<Signin_class> dataVerture = new json<Signin_class>();
@@ -264,7 +196,7 @@ public void connect_studentname(){
     public void connect_apply(){
         new Thread(){
             public void run(){
-                String path = "http://192.168.191.1:8080/MyHsd/apply";
+                String path = port.port+"/GXQServices/apply";
                 conn.Postclient(path,"",gxq_apply_handler);
             }
         }.start();
