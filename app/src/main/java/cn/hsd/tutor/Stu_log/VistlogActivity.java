@@ -83,7 +83,7 @@ public class VistlogActivity extends AppCompatActivity {
                 conn.Postclient(path, infoResult, handler);
             }
 
-        }.start();//单纯的测试
+        }.start();
     }
 
 }
