@@ -75,7 +75,9 @@
         <activity android:name=".message.Qxx_WriteActivity" />
         <activity android:name=".message.Qxx_MessageActivity" />
         <activity android:name="cn.hsd.tutor.gxq_teacher.gxq_teacher_Activity" />
-        <activity android:name="cn.hsd.tutor.gxq_teacher.Apply_gxqshow_Activity"></activity>
+        <activity android:name="cn.hsd.tutor.gxq_teacher.Apply_gxqshow_Activity">
+
+        </activity>
 
     </application>
 

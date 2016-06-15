@@ -197,7 +197,7 @@ public void connect_studentname(){
         new Thread(){
             public void run(){
                 String path = port.port+"/GXQServices/apply";
-                conn.Postclient(path,"",gxq_apply_handler);
+                conn.Postclient(path,"123",gxq_apply_handler);
             }
         }.start();
     }
