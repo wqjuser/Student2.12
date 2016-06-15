@@ -81,10 +81,6 @@ public class VistlogActivity extends AppCompatActivity {
                 String infoResult = json.ObjectToJson1(log);
                 SDS_Httpclient conn = new SDS_Httpclient();
                 conn.Postclient(path, infoResult, handler);
-                //我在这里测试一下
-
-
-
             }
 
         }.start();
