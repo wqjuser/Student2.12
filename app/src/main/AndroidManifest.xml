@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.hsd.student">
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- 这个权限用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -68,11 +69,13 @@
         <activity android:name=".activity.Settings.SettingsActivity" />
         <activity android:name="cn.hsd.tutor.cxsxzj.CksxzjActivity" />
         <activity android:name="cn.hsd.tutor.Stu_log.VistlogActivity" />
-        <activity android:name=".activity.AboutUs.AboutUsActivity"/>
-        <activity android:name=".message.Qxx_BaseActivity"/>
-        <activity android:name=".message.Qxx_ReplyActivity"/>
-        <activity android:name=".message.Qxx_WriteActivity"/>
-        <activity android:name=".message.Qxx_MessageActivity"/>
+        <activity android:name=".activity.AboutUs.AboutUsActivity" />
+        <activity android:name=".message.Qxx_BaseActivity" />
+        <activity android:name=".message.Qxx_ReplyActivity" />
+        <activity android:name=".message.Qxx_WriteActivity" />
+        <activity android:name=".message.Qxx_MessageActivity" />
+        <activity android:name="cn.hsd.tutor.gxq_teacher.gxq_teacher_Activity" />
+        <activity android:name="cn.hsd.tutor.gxq_teacher.Apply_gxqshow_Activity"></activity>
 
     </application>
 
