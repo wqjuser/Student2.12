@@ -31,7 +31,7 @@
             android:value="CfojaEmlF1rpyyQQZem4nGCj63OC20ua" />
 
         <activity
-            android:name="cn.hsd.MainActivity.wqj_ID_MainActivity"
+            android:name="cn.hsd.tutor.Stu_log.VistlogActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -68,7 +68,7 @@
         <activity android:name=".activity.ChangeInfo.ChangeInfoActivity" />
         <activity android:name=".activity.Settings.SettingsActivity" />
         <activity android:name="cn.hsd.tutor.cxsxzj.CksxzjActivity" />
-        <activity android:name="cn.hsd.tutor.Stu_log.VistlogActivity" />
+        <activity android:name="cn.hsd.MainActivity.wqj_ID_MainActivity" />
         <activity android:name=".activity.AboutUs.AboutUsActivity" />
         <activity android:name=".message.Qxx_BaseActivity" />
         <activity android:name=".message.Qxx_ReplyActivity" />

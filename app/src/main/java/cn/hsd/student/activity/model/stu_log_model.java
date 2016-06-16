@@ -5,6 +5,7 @@ package cn.hsd.student.activity.model;
  */
 public class stu_log_model {
     private String et1="";
+
     public String getEt1() {
         return et1;
     }

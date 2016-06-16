@@ -87,7 +87,7 @@ public void connectserv(){
             String path = port.port+"/GXQServices/xsxs";
             conn = new SDS_Httpclient();
 
-             conn.Postclient(path,"",gxq_zmhandler);
+             conn.Postclient(path,"123",gxq_zmhandler);
         }
     }.start();
 }

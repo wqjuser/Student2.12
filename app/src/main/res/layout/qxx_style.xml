@@ -1,34 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:descendantFocusability="blocksDescendants"
-    android:layout_width="fill_parent" android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants">
+
     <cn.hsd.student.message.Qxx_TopLine
-        android:textColor="#ffff0000" android:gravity="left" android:id="@+id/qxx_changeTo"
-        android:background="@drawable/shapetop" android:layout_width="300.0dip"
-        android:layout_height="25.0dip" android:layout_marginTop="8.0dip"
-        android:layout_centerHorizontal="true" />
-    <cn.hsd.student.message.Qxx_TextViewLine
-        android:textSize="18.0sp" android:textColor="#ff000000" android:id="@+id/qxx_changeContent"
-        android:background="@drawable/shapebody" android:layout_width="300.0dip"
-        android:layout_height="wrap_content" android:minHeight="68.0dip"
-        android:layout_below="@+id/qxx_changeTo"
-        android:layout_centerHorizontal="true" android:lineSpacingExtra="3.0dip" />
-    <TextView android:id="@+id/qxx_changeDate"
-        android:focusable="false" android:layout_width="wrap_content"
-        android:layout_height="25.0dip" android:layout_marginRight="50dip"
-        android:textColor="#ffff0000"
-        android:layout_above="@+id/qxx_changeContent" android:layout_alignRight="@+id/qxx_changeContent" />
-    <Button android:id="@+id/qxx_delete" android:background="@drawable/stylebutton2"
-        android:focusable="false" android:layout_width="27.0dip"
-        android:layout_height="27.0dip" android:layout_marginRight="7.0dip"
-        android:layout_above="@+id/qxx_changeContent" android:layout_alignRight="@+id/qxx_changeContent" />
-    <TextView 
-        android:id="@+id/qxx_ifreply"
+        android:id="@+id/qxx_changeTo"
         android:layout_width="300.0dip"
         android:layout_height="25.0dip"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/shapebottom"
-        android:gravity="right" 
+        android:layout_marginTop="8.0dip"
+        android:background="@drawable/shapetop"
+        android:gravity="left"
+        android:textColor="#ffff0000" />
+
+    <cn.hsd.student.message.Qxx_TextViewLine
+        android:id="@+id/qxx_changeContent"
+        android:layout_width="300.0dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qxx_changeTo"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shapebody"
+        android:lineSpacingExtra="3.0dip"
+        android:minHeight="68.0dip"
+        android:textColor="#ff000000"
+        android:textSize="18.0sp" />
+
+    <TextView
+        android:id="@+id/qxx_changeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="25.0dip"
+        android:layout_above="@+id/qxx_changeContent"
+        android:layout_alignRight="@+id/qxx_changeContent"
+        android:layout_marginRight="50dip"
+        android:focusable="false"
+        android:textColor="#ffff0000" />
+
+    <Button
+        android:id="@+id/qxx_delete"
+        android:layout_width="27.0dip"
+        android:layout_height="27.0dip"
+        android:layout_above="@+id/qxx_changeContent"
+        android:layout_alignRight="@+id/qxx_changeContent"
+        android:layout_marginRight="7.0dip"
+        android:background="@drawable/stylebutton2"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/qxx_ifreply"
+        android:layout_width="300.0dip"
+        android:layout_height="25.0dip"
         android:layout_below="@+id/qxx_changeContent"
-        />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shapebottom"
+        android:gravity="right" />
 </RelativeLayout>

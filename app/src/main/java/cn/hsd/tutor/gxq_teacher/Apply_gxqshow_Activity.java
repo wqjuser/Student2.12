@@ -168,7 +168,7 @@ public void connect_studentname(){
 //            json<Signin_class> dataVerture = new json<Signin_class>();
 //            String returnJson = dataVerture.ObjectToJson1(data);
 ////            String returnJson ="";
-            conn.Postclient(path,"",gxq_studentnaehandler);
+            conn.Postclient(path,"123",gxq_studentnaehandler);
         }
     }.start();
 }

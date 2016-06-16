@@ -131,18 +131,7 @@ public class Qxx_MessageAdapter extends BaseAdapter {
 
 						@Override
 						public void onClick(DialogInterface dialog, int i) {
-							// TODO Auto-generated method stub
-//							Qxx_SqliteHelper sql = new Qxx_SqliteHelper(context, null,
-//									null, 0);
-//							SQLiteDatabase dataBase = sql.getWritableDatabase();
-////							Qxx_ChangeSqlite change = new Qxx_ChangeSqlite();
-//							Qxx_Message message = new Qxx_Message();
-//							message.setId((String) list.get(position).get(
-//									"idItem"));
-////							change.delete(dataBase, message);
-//							// �˴�����activity��ķ�����������ת��
-//							((Qxx_MessageActivity) context).showUpdate();
-//							// a.showUpdate();
+
 
 						}
 					});
