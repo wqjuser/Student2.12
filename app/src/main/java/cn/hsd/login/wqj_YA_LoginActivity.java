@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import PORT.port;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Json.json;
 import cn.hsd.student.activity.StudentMain.StudentActivity;
@@ -37,8 +38,8 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
 
 
             } else {
-                SpTools.setBooleans(getApplicationContext(), Mycontents.ISSETUP, true);
-                Toast.makeText(wqj_YA_LoginActivity.this,"登陆成功",Toast.LENGTH_LONG).show();
+                //SpTools.setBooleans(getApplicationContext(), Mycontents.ISSETUP, true);
+                Toast.makeText(wqj_YA_LoginActivity.this,"登陆失败，请检查你的身份证号或者密码是否正确",Toast.LENGTH_LONG).show();
 
             }
 
@@ -46,7 +47,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
 
         @Override
         public void onFailture(String content) {
-            Toast.makeText(wqj_YA_LoginActivity.this, "登陆失败，请检查你的身份证号和密码并重新登录", Toast.LENGTH_LONG).show();
+            Toast.makeText(wqj_YA_LoginActivity.this, "登陆失败，与服务器连接失败", Toast.LENGTH_LONG).show();
             super.onFailture(content);
         }
     };
@@ -76,7 +77,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
 
                     new Thread() {
                         public void run() {
-                            String path = "http://192.168.1.100:8080/WQJServices/TestServlet";
+                            String path = port.port+"/WQJServices/StuLoginServlet";
                             username = tv1.getText().toString().trim();
                             password = tv2.getText().toString().trim();
                             YA_Login_model log_data = new YA_Login_model();
@@ -94,19 +95,5 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
         });
 
     }
-   /* public class StuBtuOnClickListener implements View.OnClickListener{
-        public void onClick(View v){
-            if(tv2.length()==0||tv1.length()==0){
-                Toast.makeText(wqj_YA_LoginActivity.this,"学号或密码不能为空",Toast.LENGTH_LONG).show();
-            }
-            else if(tv1.length()<10){
-                Toast.makeText(wqj_YA_LoginActivity.this,"学号格式错误或者长度不够",Toast.LENGTH_LONG).show();
-            }
-            else if(tv2.length()<6){
-                Toast.makeText(wqj_YA_LoginActivity.this,"密码错误",Toast.LENGTH_LONG).show();
-            }
 
-        }
-    }
-*/
 }

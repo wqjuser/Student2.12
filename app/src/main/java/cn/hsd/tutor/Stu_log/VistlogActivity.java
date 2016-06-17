@@ -8,9 +8,6 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -40,39 +37,6 @@ public class VistlogActivity extends AppCompatActivity {
     SDS_ZMHandler handler = new SDS_ZMHandler() {
         @Override
         public void onSuccess(String content) {
-            try {
-                JSONArray jsonArray = new  JSONArray(content);
-
-                list = new ArrayList<stu_log_model>();
-                for (int i = 0; i < jsonArray.length(); i++) {
-                    String contents = (String) jsonArray.getJSONObject(i).get("contents");
-//                    String detail = (String) jsonArray.getJSONObject(i).get("message_detail");
-//                    String receive = (String) jsonArray.getJSONObject(i).get("message_receiveName");
-//                    String send = (String) jsonArray.getJSONObject(i).get("message_sendName");
-                    stu_log_model stu_log = new stu_log_model();
-                    stu_log.setContent(contents);
-
-//                    mge.setMessage_detail(detail);
-//                    mge.setMessage_receiveName(receive);
-//                    mge.setMessage_sendName(send);
-                    list.add(stu_log);
-                }
-            } catch (JSONException e) {
-
-                e.printStackTrace();
-            }
-            for (stu_log_model stu_log : list) {
-                Map<String, Object> item = new HashMap<String, Object>();
-
-                item.put("contents",stu_log.getContent());
-//                item.put("message_detail", message.getMessage_detail());
-//                item.put("message_receiveName", message.getMessage_receiveName());
-//                item.put("message_sendName", message.getMessage_sendName());
-                item.put("EXPANDED", Boolean.valueOf(false));
-                itemList.add(item);
-            }
-            adapter = new Stu_log_Adapter(VistlogActivity.this, itemList);
-            listView.setAdapter(adapter);
 
             super.onSuccess(content);//content return data(json);
             Toast.makeText(VistlogActivity.this, "查询成功", Toast.LENGTH_LONG).show();

@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import PORT.port;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Json.json;
 import cn.hsd.student.activity.StudentMain.StudentActivity;
-import cn.hsd.student.activity.login.InfoActivity;
 import cn.hsd.student.activity.login.Mycontents;
 import cn.hsd.student.activity.login.SpTools;
 import cn.hsd.student.activity.model.FTea_Login_model;
@@ -30,7 +30,7 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
         public void onSuccess(String content) {
             super.onSuccess(content);//content return data(json);
             if ("1".equals(content)) {
-                SpTools.getBooleans(getApplicationContext(), Mycontents.ISSETUP, false);
+                //SpTools.getBooleans(getApplicationContext(), Mycontents.ISSETUP, false);
                 Toast.makeText(wqj_FTea_LoginActivity.this, "登陆成功", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(wqj_FTea_LoginActivity.this, StudentActivity.class);
                 startActivity(intent);
@@ -39,8 +39,8 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
             } else {
                 SpTools.setBooleans(getApplicationContext(), Mycontents.ISSETUP, true);
                 //Toast.makeText(wqj_Stu_LoginActivity.this,"登陆成功",Toast.LENGTH_LONG).show();
-                Intent intent1 = new Intent(wqj_FTea_LoginActivity.this, InfoActivity.class);
-                startActivity(intent1);
+//                Intent intent1 = new Intent(wqj_FTea_LoginActivity.this, InfoActivity.class);
+//                startActivity(intent1);
             }
 
         }
@@ -75,7 +75,7 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
 
                     new Thread() {
                         public void run() {
-                            String path = "http://192.168.1.100:8080/WQJServices/TestServlet";
+                            String path = port.port+"/WQJServices/TestServlet";
                             username = tv1.getText().toString().trim();
                             password = tv2.getText().toString().trim();
                             FTea_Login_model log_data = new FTea_Login_model();

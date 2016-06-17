@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#d5e9fd"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_marginTop="4dip"
+            android:background="#d5e9fd"
+            android:text="评定成绩"
+            android:textColor="#000"
+            android:layout_height="fill_parent"
+            android:textSize="25dip"
+
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="10dip"
+        android:background="#F2F2F2"
+        android:text="请选择学生"/>
+    <ListView
+        android:id="@+id/tutor_mg_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:background="#F2F2F2">
+
+    </ListView>
+
+</LinearLayout>
