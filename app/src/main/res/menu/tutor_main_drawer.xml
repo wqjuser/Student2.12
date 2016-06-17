@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/refer_sign"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="查询实习生签到" />
+        <item
+            android:id="@+id/refer_log"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="查看实习生日志" />
+        <item
+            android:id="@+id/assign_goodb"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="指定优秀实习生" />
+        <item
+            android:id="@+id/assess_grade"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="为学生评定成绩" />
+        <item
+            android:id="@+id/tutor_leaveword"
+            android:icon="@drawable/ic_menu_send"
+            android:title="给学生留言" />
+        <item
+            android:id="@+id/assess_leave"
+            android:icon="@drawable/ic_menu_share"
+            android:title="审批请假申请" />
+        <item
+            android:id="@+id/refer_summary"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="查询实习总结" />
+    </group>
+
+    <!-- <item android:title="Communicate">
+         <menu>
+             <item
+                 android:id="@+id/nav_share"
+                 android:icon="@drawable/ic_menu_share"
+                 android:title="Share" />
+             <item
+                 android:id="@+id/nav_send"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Send" />
+         </menu>
+     </item> -->
+
+</menu>

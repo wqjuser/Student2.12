@@ -9,14 +9,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import PORT.port;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Json.json;
-import cn.hsd.student.activity.StudentMain.StudentActivity;
 import cn.hsd.student.activity.login.Mycontents;
 import cn.hsd.student.activity.login.SpTools;
 import cn.hsd.student.activity.model.ZTea_Login_model;
 import cn.hsd.student.activity.service.SDS_Httpclient;
 import cn.hsd.student.activity.service.SDS_ZMHandler;
+import cn.hsd.tutor.qmftutor.TutorActivity;
 
 public class wqj_ZTea_LoginActivity extends AppCompatActivity {
     private Button wqj_zt_bt;
@@ -32,7 +33,7 @@ public class wqj_ZTea_LoginActivity extends AppCompatActivity {
             if ("1".equals(content)) {
                 SpTools.getBooleans(getApplicationContext(), Mycontents.ISSETUP, false);
                 Toast.makeText(wqj_ZTea_LoginActivity.this, "登陆成功", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(wqj_ZTea_LoginActivity.this, StudentActivity.class);
+                Intent intent = new Intent(wqj_ZTea_LoginActivity.this, TutorActivity.class);
                 startActivity(intent);
 
 
@@ -74,7 +75,7 @@ public class wqj_ZTea_LoginActivity extends AppCompatActivity {
                 } else {
                     new Thread() {
                         public void run() {
-                            String path = "http://192.168.1.100:8080/WQJServices/TestServlet";
+                            String path = port.port+"/WQJServices/StuLoginServlet";
                             username = tv1.getText().toString().trim();
                             password = tv2.getText().toString().trim();
                             ZTea_Login_model log_data = new ZTea_Login_model();
@@ -94,20 +95,3 @@ public class wqj_ZTea_LoginActivity extends AppCompatActivity {
 
     }
 }
-   /* public class StuBtuOnClickListener implements View.OnClickListener{
-        public void onClick(View v){
-            if(tv2.length()==0||tv1.length()==0){
-                Toast.makeText(wqj_ZTea_LoginActivity.this,"学号或密码不能为空",Toast.LENGTH_LONG).show();
-            }
-            else if(tv1.length()<10){
-                Toast.makeText(wqj_ZTea_LoginActivity.this,"学号格式错误或者长度不够",Toast.LENGTH_LONG).show();
-            }
-            else if(tv2.length()<6){
-                Toast.makeText(wqj_ZTea_LoginActivity.this,"密码错误",Toast.LENGTH_LONG).show();
-            }
-
-        }
-    }
-
-}
-*/
