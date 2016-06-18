@@ -94,33 +94,7 @@ public class Gxq_apply_main extends AppCompatActivity {
         }
         return dataList;
     }
-//    public List<String> shishi(Gxq_apply_student data1) {
-//
-//        if (gxqStatic.apply_student_name.equals(""))
-//        {
-//            dataList.add("fffff");
-//        }
-////        else {
-////            Gxq_apply_student gas = new Gxq_apply_student();
-////            gas.setApply_student_beginname("aaa");
-////            gas.setApply_student_overname("aaas");
-////            gas.setApply_student_name("aadsa");
-////            gas.setApply_student_reason("aaa");
-////            gas.setApply_student_applyname("aaa");
-////            gas.setApply_student_result("未处理");
-//        else {
-//            backList.add(data1);
-//            if (backList.size() > 0) {
-//                dataList.clear();
-//                for (Gxq_apply_student provience : backList) {
-//                    Toast.makeText(Gxq_apply_main.this, provience.getApply_student_beginname(), Toast.LENGTH_SHORT).show();
-//                    dataList.add(provience.getApply_student_beginname());
-//                }
-//
-//            }
-//        }
-//        return dataList;
-//    }
+
 
     public List<String> diaoyong(List<Gxq_apply_student>  backdata) {
 

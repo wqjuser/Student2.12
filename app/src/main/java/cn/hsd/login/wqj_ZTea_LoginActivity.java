@@ -75,7 +75,7 @@ public class wqj_ZTea_LoginActivity extends AppCompatActivity {
                 } else {
                     new Thread() {
                         public void run() {
-                            String path = port.port+"/WQJServices/StuLoginServlet";
+                            String path = port.port+"/StuLoginServlet";
                             username = tv1.getText().toString().trim();
                             password = tv2.getText().toString().trim();
                             ZTea_Login_model log_data = new ZTea_Login_model();

@@ -32,9 +32,7 @@ public class Qxx_WriteActivity extends Qxx_BaseActivity {
 
     SDS_ZMHandler handler = new SDS_ZMHandler() {
         public void onSuccess(String content) {
-//			json<Qxx_Message> returnjson = new json<Qxx_Message>();
-//			List<Qxx_Message> list= returnjson.jsonToList2(content);
-//			Qxx_Message data = list.get(0);
+
 
         }
 
@@ -83,21 +81,19 @@ public class Qxx_WriteActivity extends Qxx_BaseActivity {
                 message.setMessage_time(date);
                 message.setMessage_receiveName(toname);
                 message.setMessage_sendName("����");
-//				ChangeSqlite.add(Database, message);
 
 
-//�ϴ���������
-                new Thread() {//ע����û��װ���߳�
+                new Thread() {
 
                     public void run() {
 
-                        String path = port.port+"/MyHsd/xsxs";
+                        String path = port.port + "/qjqxsxs";
 
 
-                        SDS_Httpclient conn = new SDS_Httpclient();//��ȡ����
-                        json<Qxx_Message> returnjson = new json<Qxx_Message>();//new һ��json����
+                        SDS_Httpclient conn = new SDS_Httpclient();
+                        json<Qxx_Message> returnjson = new json<Qxx_Message>();
                         String data = returnjson.ObjectToJson1(message);
-                        conn.Postclient(path, data, handler); //��post�����ύ����
+                        conn.Postclient(path, data, handler);
 
 
                     }

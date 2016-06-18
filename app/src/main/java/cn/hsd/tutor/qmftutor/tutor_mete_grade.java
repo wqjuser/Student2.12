@@ -88,7 +88,7 @@ public class tutor_mete_grade extends AppCompatActivity {
 
             public void run() {
 
-                String path = port.port+"/QMFServices/mgxsxs";
+                String path = port.port+"/mgxsxs";
                 conn = new SDS_Httpclient();
                 conn.Postclient(path, "", sds_zmhandler);
             }
@@ -132,7 +132,7 @@ public class tutor_mete_grade extends AppCompatActivity {
 
                 //  Toast.makeText(getApplicationContext(),nameet.getText().toString(),Toast.LENGTH_LONG).show();
 
-                String path = port.port+"/QMFServices/lwxsxs";
+                String path = port.port+"/lwxsxs";
                 conn = new SDS_Httpclient();
                 json<tutor_mg_refer> dataVerture = new json<tutor_mg_refer>();
                 String returnJson = dataVerture.ObjectToJson1(date);

@@ -71,7 +71,7 @@ public class CksxzjActivity extends AppCompatActivity implements View.OnTouchLis
                         public void onClick(DialogInterface dialog, int id) {
                             new Thread() {
                                 public void run() {
-                                    String path = port.port + "/MyHsd/xsxs";
+                                    String path = port.port + "/Infoxsxs";
                                     conn = new SDS_Httpclient();
                                     Sxzj_commit_model data = new Sxzj_commit_model();
                                     data.setLog_title(edittext_title.getText().toString().trim());

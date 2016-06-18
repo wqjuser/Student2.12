@@ -144,7 +144,7 @@ public class Tutor_Good_student extends AppCompatActivity {
     public void connect_tijiao(){
         new Thread(){
             public void run(){
-                String path = port.port+"/QMFServices/lwxsxs";
+                String path = port.port+"/lwxsxs";
                 conn = new SDS_Httpclient();
                 data = new Good_Student_Apply();
                 data.setGoodStudent_id(result_id);
@@ -159,7 +159,7 @@ public class Tutor_Good_student extends AppCompatActivity {
     public void connect_studentname(){
         new Thread(){
             public void run(){
-                String path = port.port+"/QMFServices/goodnamexsxs";
+                String path = port.port+"/goodnamexsxs";
                 conn = new SDS_Httpclient();
 
                 conn.Postclient(path,"",gxq_studentnaehandler);
@@ -190,7 +190,7 @@ public class Tutor_Good_student extends AppCompatActivity {
     public void connect_apply(){
         new Thread(){
             public void run(){
-                String path = port.port+"/QMFServices/gsxsxs";
+                String path = port.port+"/gsxsxs";
                 conn.Postclient(path,"",gxq_apply_handler);
             }
         }.start();

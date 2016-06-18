@@ -77,7 +77,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
 
                     new Thread() {
                         public void run() {
-                            String path = port.port+"/WQJServices/StuLoginServlet";
+                            String path = port.port+"/StuLoginServlet";
                             username = tv1.getText().toString().trim();
                             password = tv2.getText().toString().trim();
                             YA_Login_model log_data = new YA_Login_model();

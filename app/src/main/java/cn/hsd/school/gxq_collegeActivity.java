@@ -43,7 +43,7 @@ public class gxq_collegeActivity extends AppCompatActivity {
 
         new Thread(){
             public void run(){
-                String path = port.port+"/GXQServices/newcollegemanager";
+                String path = port.port+"/newcollegemanager";
                 SDS_Httpclient conn = new SDS_Httpclient();
 
                 json<college_message> dataVerture = new json<college_message>();

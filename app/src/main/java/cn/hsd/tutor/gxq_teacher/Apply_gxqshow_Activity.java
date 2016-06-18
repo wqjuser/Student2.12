@@ -147,7 +147,7 @@ public class Apply_gxqshow_Activity extends AppCompatActivity {
     public void connect_tijiao(){
         new Thread(){
             public void run(){
-                String path = port.port+"/GXQServices/submitxsxs";
+                String path = port.port+"/submitxsxs";
                 conn = new SDS_Httpclient();
                Gxq_apply_student data = new Gxq_apply_student();
                 data.setLeave_id(result_id);
@@ -162,7 +162,7 @@ public class Apply_gxqshow_Activity extends AppCompatActivity {
 public void connect_studentname(){
     new Thread(){
         public void run(){
-            String path = port.port+"/GXQServices/xsxs";
+            String path = port.port+"/xsxs";
             conn = new SDS_Httpclient();
 //            Signin_class data = new Signin_class();
 //            json<Signin_class> dataVerture = new json<Signin_class>();
@@ -196,7 +196,7 @@ public void connect_studentname(){
     public void connect_apply(){
         new Thread(){
             public void run(){
-                String path = port.port+"/GXQServices/apply";
+                String path = port.port+"/apply";
                 conn.Postclient(path,"123",gxq_apply_handler);
             }
         }.start();

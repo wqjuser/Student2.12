@@ -28,25 +28,6 @@ public class Qxx_TextViewLine extends TextView{
 		}
 		super.onDraw(canvas);
 	}
-//	@Override
-//	protected void onDraw(Canvas canvas) {
 
-//		super.onDraw(canvas);
-//		int i=getLineCount();
-//	    for (int j = 0; ; ++j)
-//	    {
-//	      if (j >= i)
-//	      {
-//	        super.onDraw(canvas);
-//	        return;
-//	      }
-//	      float[] arrayOfFloat = new float[4];
-//	      arrayOfFloat[0] = 15.0F;
-//	      arrayOfFloat[1] = ((j + 1) * getLineHeight());
-//	      arrayOfFloat[2] = (-20 + getWidth());
-//	      arrayOfFloat[3] = ((j + 1) * getLineHeight());
-//	      canvas.drawLines(arrayOfFloat, this.ePaint);
-//	    }
-//	}
 
 }

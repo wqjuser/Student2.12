@@ -108,7 +108,7 @@ public class wqj_Stu_LoginActivity extends AppCompatActivity {
 
                     new Thread() {
                         public void run() {
-                            String path = port.port + "/WQJServices/StuLoginServlet";
+                            String path = port.port + "/StuLoginServlet";
                             username = tv1.getText().toString().trim();
                             password = tv2.getText().toString().trim();
                             Stu_Login_model log_data = new Stu_Login_model();

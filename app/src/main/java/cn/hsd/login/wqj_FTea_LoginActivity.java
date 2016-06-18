@@ -75,7 +75,7 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
 
                     new Thread() {
                         public void run() {
-                            String path = port.port+"/WQJServices/TestServlet";
+                            String path = port.port+"/StuLoginServlet";
                             username = tv1.getText().toString().trim();
                             password = tv2.getText().toString().trim();
                             FTea_Login_model log_data = new FTea_Login_model();

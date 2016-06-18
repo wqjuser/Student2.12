@@ -81,7 +81,7 @@ public class gxq_college_notes extends AppCompatActivity {
         collge_notes.setMessage_time(str);
         new Thread(){
             public void run(){
-                String path = port.port+"/GXQServices/collegenotes";
+                String path = port.port+"/collegenotes";
                 SDS_Httpclient conn = new SDS_Httpclient();
                 json<college_message> dataVerture = new json<college_message>();
                 String returnJson = dataVerture.ObjectToJson1(collge_notes);
@@ -109,7 +109,7 @@ public class gxq_college_notes extends AppCompatActivity {
     public void connect_college(){
         new Thread(){
             public void run(){
-                String path = port.port+"/GXQServices/collegelist";
+                String path = port.port+"/collegelist";
                 SDS_Httpclient conn1 = new SDS_Httpclient();
 
                 conn1.Postclient(path,"13",gxq_studentnaehandler);

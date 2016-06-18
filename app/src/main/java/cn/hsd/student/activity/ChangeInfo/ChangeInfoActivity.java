@@ -73,7 +73,7 @@ public class ChangeInfoActivity extends AppCompatActivity {
         } else {
             new Thread() {
                 public void run() {
-                    String path = port.port+"/WQJServices/StuLoginServlet";
+                    String path = port.port+"/StuLoginServlet";
                     phonenumber = et1.getText().toString().trim();
                     qqnumber = et2.getText().toString().trim();
                     name = et3.getText().toString().trim();
