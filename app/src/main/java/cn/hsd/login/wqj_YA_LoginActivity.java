@@ -13,8 +13,7 @@ import PORT.port;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Json.json;
 import cn.hsd.student.activity.StudentMain.StudentActivity;
-import cn.hsd.student.activity.login.Mycontents;
-import cn.hsd.student.activity.login.SpTools;
+import cn.hsd.student.activity.gxq_class.gxqStatic;
 import cn.hsd.student.activity.model.YA_Login_model;
 import cn.hsd.student.activity.service.SDS_Httpclient;
 import cn.hsd.student.activity.service.SDS_ZMHandler;
@@ -31,7 +30,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
             super.onSuccess(content);//content return data(json);
 
             if ("1".equals(content)) {
-                SpTools.getBooleans(getApplicationContext(), Mycontents.ISSETUP, false);
+                //SpTools.getBooleans(getApplicationContext(), Mycontents.ISSETUP, false);
                 Toast.makeText(wqj_YA_LoginActivity.this, "登陆成功", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(wqj_YA_LoginActivity.this, StudentActivity.class);
                 startActivity(intent);
@@ -39,7 +38,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
 
             } else {
                 //SpTools.setBooleans(getApplicationContext(), Mycontents.ISSETUP, true);
-                Toast.makeText(wqj_YA_LoginActivity.this,"登陆失败，请检查你的身份证号或者密码是否正确",Toast.LENGTH_LONG).show();
+                Toast.makeText(wqj_YA_LoginActivity.this,"登陆失败，请检查你的工号或者密码是否正确",Toast.LENGTH_LONG).show();
 
             }
 
@@ -47,7 +46,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
 
         @Override
         public void onFailture(String content) {
-            Toast.makeText(wqj_YA_LoginActivity.this, "登陆失败，与服务器连接失败", Toast.LENGTH_LONG).show();
+            Toast.makeText(wqj_YA_LoginActivity.this, "与服务器连接失败", Toast.LENGTH_LONG).show();
             super.onFailture(content);
         }
     };
@@ -63,11 +62,11 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (tv1.length() == 0 && tv2.length() == 0) {
-                    Toast.makeText(wqj_YA_LoginActivity.this,"身份证号或密码不能为空",Toast.LENGTH_LONG).show();
+                    Toast.makeText(wqj_YA_LoginActivity.this,"工号或密码不能为空",Toast.LENGTH_LONG).show();
 
                 }
                 else if (tv1.length()<13){
-                    Toast.makeText(wqj_YA_LoginActivity.this,"身份证号错误或者格式不正确",Toast.LENGTH_LONG).show();
+                    Toast.makeText(wqj_YA_LoginActivity.this,"工号错误或者格式不正确",Toast.LENGTH_LONG).show();
                 }
                 else if (tv2.length()<6){
                     Toast.makeText(wqj_YA_LoginActivity.this,"密码错误",Toast.LENGTH_LONG).show();
@@ -79,6 +78,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
                         public void run() {
                             String path = port.port+"/StuLoginServlet";
                             username = tv1.getText().toString().trim();
+                            gxqStatic.info = username;
                             password = tv2.getText().toString().trim();
                             YA_Login_model log_data = new YA_Login_model();
                             log_data.setUsername(username);

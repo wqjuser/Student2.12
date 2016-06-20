@@ -13,11 +13,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import cn.hsd.student.R;
+import cn.hsd.student.activity.gxq_class.gxqStatic;
 
 public class SchoolActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private TextView tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,9 @@ public class SchoolActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView=navigationView.getHeaderView(0);
+        tv1=(TextView)headerView.findViewById(R.id.hq_info_sch);
+        tv1.setText(gxqStatic.info);
     }
 
     @Override

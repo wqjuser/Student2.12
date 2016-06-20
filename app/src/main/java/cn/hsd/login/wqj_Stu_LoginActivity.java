@@ -19,6 +19,7 @@ import PORT.port;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Json.json;
 import cn.hsd.student.activity.StudentMain.StudentActivity;
+import cn.hsd.student.activity.gxq_class.gxqStatic;
 import cn.hsd.student.activity.login.InfoActivity;
 import cn.hsd.student.activity.model.Stu_Login_model;
 import cn.hsd.student.activity.service.SDS_Httpclient;
@@ -110,6 +111,7 @@ public class wqj_Stu_LoginActivity extends AppCompatActivity {
                         public void run() {
                             String path = port.port + "/StuLoginServlet";
                             username = tv1.getText().toString().trim();
+                            gxqStatic.info = username;
                             password = tv2.getText().toString().trim();
                             Stu_Login_model log_data = new Stu_Login_model();
                             log_data.setUsername(username);

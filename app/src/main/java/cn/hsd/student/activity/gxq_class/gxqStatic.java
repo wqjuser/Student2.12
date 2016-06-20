@@ -13,4 +13,6 @@ public class gxqStatic {
     public static   String apply_student_result=null;
 
     public static Gxq_apply_student data = null;
+
+    public static String info = "";
 }

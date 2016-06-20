@@ -13,9 +13,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Settings.SettingsActivity;
+import cn.hsd.student.activity.gxq_class.gxqStatic;
 import cn.hsd.student.activity.leava.Gxq_apply_main;
 import cn.hsd.student.activity.logcat.sds_Logcat_Activity;
 import cn.hsd.student.activity.sqyxsxs.qmf_ApplyCon;
@@ -24,11 +26,13 @@ import cn.hsd.student.message.Qxx_MessageActivity;
 
 public class StudentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private TextView tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
+        tv1=(TextView)findViewById(R.id.hq_info_stu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -49,6 +53,10 @@ public class StudentActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View headerView=navigationView.getHeaderView(0);
+        tv1=(TextView)headerView.findViewById(R.id.hq_info_stu);
+        tv1.setText(gxqStatic.info);
     }
 
     @Override
@@ -65,6 +73,8 @@ public class StudentActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.student, menu);
+       //tv1.setText("2222222");
+
         return true;
     }
 

@@ -25,7 +25,7 @@
             android:id="@+id/username_edit"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入身份证号"
+            android:hint="请输入工号"
             android:layout_below="@id/login_user_input"
             android:singleLine="true"
             android:inputType="text" />

@@ -57,26 +57,28 @@ public class wqj_ID_MainActivity extends Activity {
 
             switch (selected2) {
                 case "学生":
+                    Toast.makeText(wqj_ID_MainActivity.this, "您选择了学生", Toast.LENGTH_SHORT).show();
                     spinner.setSelection(0, true);
                     Intent intent = new Intent(wqj_ID_MainActivity.this, wqj_Stu_LoginActivity.class);
                     startActivity(intent);
                     break;
                 case "指导老师":
+                    Toast.makeText(wqj_ID_MainActivity.this, "您选择了指导老师", Toast.LENGTH_SHORT).show();
                     Intent intent1 = new Intent(wqj_ID_MainActivity.this, wqj_ZTea_LoginActivity.class);
                     startActivity(intent1);
                     break;
                 case "辅导员":
-
+                    Toast.makeText(wqj_ID_MainActivity.this, "您选择了辅导员", Toast.LENGTH_SHORT).show();
                     Intent intent2 = new Intent(wqj_ID_MainActivity.this, wqj_FTea_LoginActivity.class);
                     startActivity(intent2);
                     break;
                 case "校级管理员":
-
+                    Toast.makeText(wqj_ID_MainActivity.this, "您选择了校级管理员", Toast.LENGTH_SHORT).show();
                     Intent intent3 = new Intent(wqj_ID_MainActivity.this, wqj_XA_LoginActivity.class);
                     startActivity(intent3);
                     break;
                 case "院级管理员":
-
+                    Toast.makeText(wqj_ID_MainActivity.this, "您选择了院级管理员", Toast.LENGTH_SHORT).show();
                     Intent intent4 = new Intent(wqj_ID_MainActivity.this, wqj_YA_LoginActivity.class);
                     startActivity(intent4);
                     break;
@@ -87,7 +89,7 @@ public class wqj_ID_MainActivity extends Activity {
         //当用户不做选择时调用的该方法
         public void onNothingSelected(AdapterView<?> arg0) {
             Toast.makeText(wqj_ID_MainActivity.this, "您没有选择任何选项", Toast.LENGTH_SHORT).show();
-            //我只是想测试一下update
+
         }
     }
 
