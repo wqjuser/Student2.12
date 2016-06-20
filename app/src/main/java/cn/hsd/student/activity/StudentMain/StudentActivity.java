@@ -1,6 +1,9 @@
 package cn.hsd.student.activity.StudentMain;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -8,11 +11,14 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import cn.hsd.student.R;
@@ -27,6 +33,11 @@ import cn.hsd.student.message.Qxx_MessageActivity;
 public class StudentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private TextView tv1;
+    private ImageView iv1;
+    private Button bt1;
+
+    private final int OPEN_RESULT = 1;
+    private final int PICK_RESULT = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +68,52 @@ public class StudentActivity extends AppCompatActivity
         View headerView=navigationView.getHeaderView(0);
         tv1=(TextView)headerView.findViewById(R.id.hq_info_stu);
         tv1.setText(gxqStatic.info);
+        iv1 = (ImageView) headerView.findViewById(R.id.stu_ce_iv);
+    }
+
+    public void camera(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(StudentActivity.this);
+        builder.setTitle("选择拍照方式");
+        builder.setPositiveButton("本地图片", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, PICK_RESULT);
+
+            }
+        });
+        builder.setNegativeButton("相机拍照", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(
+                        android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, OPEN_RESULT);
+            }
+        });
+        builder.show();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case OPEN_RESULT:
+                if (resultCode == RESULT_OK) {
+                    Bundle bundle = data.getExtras();
+                    Bitmap bitmap = (Bitmap) bundle.get("data");
+                    iv1.setImageBitmap(bitmap);
+                }
+                break;
+            case PICK_RESULT:
+                if (resultCode == RESULT_OK) {
+                    Uri uri = data.getData();
+                    iv1.setImageURI(uri);
+                }
+                break;
+        }
     }
 
     @Override

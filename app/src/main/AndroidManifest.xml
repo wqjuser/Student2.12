@@ -36,6 +36,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -45,10 +46,12 @@
         <activity
             android:name=".activity.StudentMain.StudentActivity"
             android:theme="@style/AppTheme.NoActionBar1" />
-        <activity android:name="cn.hsd.login.wqj_YA_LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar1"/>
-        <activity android:name="cn.hsd.login.wqj_XA_LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar1"/>
+        <activity
+            android:name="cn.hsd.login.wqj_YA_LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="cn.hsd.login.wqj_XA_LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
         <activity android:name=".activity.leava.Gxq_apply_message" />
         <activity android:name=".activity.sqyxsxs.qmf_ApplyTrainee" />
         <activity android:name=".activity.leava.Gxq_apply_main" />
@@ -57,13 +60,15 @@
         <activity
             android:name="cn.hsd.login.wqj_Stu_LoginActivity"
             android:theme="@style/AppTheme.NoActionBar1" />
-        <activity android:name="cn.hsd.login.wqj_ZTea_LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar1"/>
+        <activity
+            android:name="cn.hsd.login.wqj_ZTea_LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
         <activity android:name=".activity.login.InfoActivity" />
 
         <receiver android:name=".activity.logcat.receiver">
             <intent-filter>
                 <action android:name="com.wqj.student" />
+
                 <data android:scheme="wqj" />
             </intent-filter>
         </receiver>
@@ -81,18 +86,20 @@
         <activity android:name="cn.hsd.tutor.gxq_teacher.Apply_gxqshow_Activity" />
         <activity android:name="cn.hsd.school.gxq_college_notes" />
         <activity android:name="cn.hsd.tutor.qmftutor.Tutor_Good_student" />
-        <activity android:name="cn.hsd.tutor.qmftutor.TutorActivity"
-            android:theme="@style/AppTheme.NoActionBar1"/>
+        <activity
+            android:name="cn.hsd.tutor.qmftutor.TutorActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
         <activity android:name="cn.hsd.tutor.qmftutor.tutor_mete_grade" />
         <activity android:name="cn.hsd.tutor.qmftutor.tutor_LeaveWord" />
-        <activity android:name="cn.hsd.school.SchoolActivity"
-            android:theme="@style/AppTheme.NoActionBar1"/>
+        <activity
+            android:name="cn.hsd.school.SchoolActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
         <activity android:name="cn.hsd.school.gxq_collegeActivity" />
-        <activity android:name="cn.hsd.school.delete_college_manager">
-
-
-        </activity>
-
+        <activity android:name="cn.hsd.school.delete_college_manager" />
+        <activity android:name="cn.hsd.sett.SchsetActivity" />
+        <activity android:name="cn.hsd.sett.ColsetActivity" />
+        <activity android:name="cn.hsd.sett.TusetActivity" />
+        <activity android:name="cn.hsd.sett.FusetActivity"></activity>
     </application>
 
 </manifest>

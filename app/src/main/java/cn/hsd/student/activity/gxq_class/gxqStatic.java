@@ -15,4 +15,5 @@ public class gxqStatic {
     public static Gxq_apply_student data = null;
 
     public static String info = "";
+    public static String pass = "";
 }

@@ -36,10 +36,7 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
 
 
             } else {
-                //SpTools.setBooleans(getApplicationContext(), Mycontents.ISSETUP, true);
-                //Toast.makeText(wqj_Stu_LoginActivity.this,"登陆成功",Toast.LENGTH_LONG).show();
-//                Intent intent1 = new Intent(wqj_FTea_LoginActivity.this, InfoActivity.class);
-//                startActivity(intent1);
+
                 Toast.makeText(wqj_FTea_LoginActivity.this, "登陆失败，请检查您的工号或者密码", Toast.LENGTH_LONG).show();
             }
 
@@ -57,7 +54,6 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_ftea__login);
         wqj_ft_bt=(Button)findViewById(R.id.wqj_ft_log_button);
-//        wqj_ft_bt.setOnClickListener(new StuBtuOnClickListener());
         tv1=(TextView)findViewById(R.id.username_edit);
         tv2=(TextView)findViewById(R.id.password_edit);
         wqj_ft_bt.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +75,7 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
                             username = tv1.getText().toString().trim();
                             gxqStatic.info = username;
                             password = tv2.getText().toString().trim();
+                            gxqStatic.pass = password;
                             FTea_Login_model log_data = new FTea_Login_model();
                             log_data.setUsername(username);
                             log_data.setPassword(password);

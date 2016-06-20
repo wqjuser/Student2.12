@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:text="请谨慎修改密码，建议不要修改 !!!!"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20dip" />
+
+    <EditText
+        android:id="@+id/ypass"
+        android:hint="请输入原密码"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/rounded_edittext"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/xpas"
+        android:hint="请输入修改后的密码"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/rounded_edittext"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/xpas1"
+        android:hint="请确认密码"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/rounded_edittext"
+        android:inputType="textPassword" />
+
+    <Button
+        android:onClick="commit"
+        android:id="@+id/wqj_xa_log_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_edit"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/blue_button"
+        android:text="提交"
+        android:textColor="@android:color/holo_blue_bright" />
+
+
+</LinearLayout>

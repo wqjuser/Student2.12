@@ -79,6 +79,7 @@ public class wqj_ZTea_LoginActivity extends AppCompatActivity {
                             username = tv1.getText().toString().trim();
                             gxqStatic.info = username;
                             password = tv2.getText().toString().trim();
+                            gxqStatic.pass = password;
                             ZTea_Login_model log_data = new ZTea_Login_model();
                             log_data.setUsername(username);
                             log_data.setPassword(password);

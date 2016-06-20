@@ -79,6 +79,7 @@ public class wqj_XA_LoginActivity extends AppCompatActivity {
                             username = tv1.getText().toString().trim();
                             gxqStatic.info = username;
                             password = tv2.getText().toString().trim();
+                            gxqStatic.pass = password;
                             XA_Login_model log_data = new XA_Login_model();
                             log_data.setUsername(username);
                             log_data.setPassword(password);

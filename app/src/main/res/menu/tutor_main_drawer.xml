@@ -30,6 +30,10 @@
             android:id="@+id/refer_summary"
             android:icon="@drawable/ic_menu_manage"
             android:title="查询实习总结" />
+        <item
+            android:id="@+id/tu_setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="修改密码" />
     </group>
 
     <!-- <item android:title="Communicate">

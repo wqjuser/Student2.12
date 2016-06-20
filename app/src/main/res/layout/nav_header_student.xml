@@ -11,13 +11,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageButton
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@android:drawable/sym_def_app_icon" />
+    <ImageView
+        android:id="@+id/stu_ce_iv"
+        android:layout_width="92dip"
+        android:layout_height="80dip"
+        android:src="@drawable/yonghu2" />
 
+    <Button
+        android:onClick="camera"
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dip"
+        android:text="更改头像"
+        android:textColor="#ffffff"
+        android:background="#00ffffff" />
 
 
     <TextView

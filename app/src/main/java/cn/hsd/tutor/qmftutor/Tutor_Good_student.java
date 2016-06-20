@@ -42,9 +42,9 @@ public class Tutor_Good_student extends AppCompatActivity {
     public RadioButton radioButton1;
     public RadioButton radioButton2;
 
-    private Good_Student_Apply lastshow_gxqapply;
+    private Good_Student_Apply lastshow_qmfapply;
     public TextView starttime;
-    public TextView applychieve;
+    public TextView apply_chieve;
     public Good_Student_Apply data;
     public TextView apply_reason;
     public Button click_result;
@@ -62,7 +62,7 @@ public class Tutor_Good_student extends AppCompatActivity {
         radioButton1 =(RadioButton) findViewById(R.id.male);
         radioButton2 =(RadioButton) findViewById(R.id.qmf_female);
         starttime = (TextView) findViewById(R.id.tv_apply_time);
-        applychieve = (TextView) findViewById(R.id.tv_apply_chieve);
+        apply_chieve = (TextView) findViewById(R.id.tv_apply_chieve);
         apply_reason = (TextView) findViewById(R.id.tv_apply_reason);
         click_result = (Button) findViewById(R.id.qmf_click_result);
         //-----------------------------------------------------------radioBUtton-----------------------------------------------------
@@ -85,11 +85,12 @@ public class Tutor_Good_student extends AppCompatActivity {
         applyshow_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                lastshow_gxqapply =  personmessage.get(position);
-                starttime.setText(lastshow_gxqapply.getGs_apply_time());
-                applychieve.setText(lastshow_gxqapply.getGs_apply_chieve());
-                apply_reason.setText(lastshow_gxqapply.getGs_apply_reason());
-                result_id = lastshow_gxqapply.getGoodStudent_id();
+                lastshow_qmfapply = personmessage.get(position);
+                Toast.makeText(Tutor_Good_student.this, personmessage.toString(), Toast.LENGTH_SHORT).show();
+                starttime.setText(lastshow_qmfapply.getTrainee_time());
+                apply_chieve.setText(lastshow_qmfapply.getTrainee_achieve());
+                apply_reason.setText(lastshow_qmfapply.getTrainee_reason());
+                result_id = lastshow_qmfapply.getGoodStudent_id();
             }
         });
         //----------------------------------------------------------------------------------------------------------------------------------
@@ -116,7 +117,7 @@ public class Tutor_Good_student extends AppCompatActivity {
         switch (view.getId()){
             case R.id.qmf_click_result:
                 if ((starttime.getText()).equals("开始时间")){
-                    Toast.makeText(Tutor_Good_student.this, "请选择处理的假条", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Tutor_Good_student.this, "请选择处理", Toast.LENGTH_SHORT).show();
                 }else {
                     connect_tijiao();
                 }
@@ -126,8 +127,9 @@ public class Tutor_Good_student extends AppCompatActivity {
                 break;
         }
     }
-    //-------------------------------------提交教师返回的假条 处理数据-------------------------------------------------------------------------
-    public SDS_ZMHandler gxq_teacherbackhandler = new SDS_ZMHandler(){
+
+    //-------------------------------------提交教师返回 处理数据-------------------------------------------------------------------------
+    public SDS_ZMHandler qmf_teacherbackhandler = new SDS_ZMHandler() {
         @Override
         public void onSuccess(String content) {
             super.onSuccess(content);
@@ -144,14 +146,14 @@ public class Tutor_Good_student extends AppCompatActivity {
     public void connect_tijiao(){
         new Thread(){
             public void run(){
-                String path = port.port+"/lwxsxs";
+                String path = port.port + "/lwxsxs";
                 conn = new SDS_Httpclient();
                 data = new Good_Student_Apply();
                 data.setGoodStudent_id(result_id);
                 data.setApply_check(check_result);
                 json<Good_Student_Apply> dataVerture = new json<Good_Student_Apply>();
                 String returnJson = dataVerture.ObjectToJson1(data);
-                conn.Postclient(path,returnJson,gxq_teacherbackhandler);
+                conn.Postclient(path, returnJson, qmf_teacherbackhandler);
             }
         }.start();
     }
@@ -162,11 +164,12 @@ public class Tutor_Good_student extends AppCompatActivity {
                 String path = port.port+"/goodnamexsxs";
                 conn = new SDS_Httpclient();
 
-                conn.Postclient(path,"",gxq_studentnaehandler);
+                conn.Postclient(path, "", qmf_studentnaehandler);
             }
         }.start();
     }
-    public SDS_ZMHandler gxq_studentnaehandler = new SDS_ZMHandler(){
+
+    public SDS_ZMHandler qmf_studentnaehandler = new SDS_ZMHandler() {
         @Override
         public void onSuccess(String content) {
             super.onSuccess(content);
@@ -191,11 +194,12 @@ public class Tutor_Good_student extends AppCompatActivity {
         new Thread(){
             public void run(){
                 String path = port.port+"/gsxsxs";
-                conn.Postclient(path,"",gxq_apply_handler);
+                conn.Postclient(path, "123", qmf_apply_handler);
             }
         }.start();
     }
-    public SDS_ZMHandler gxq_apply_handler = new SDS_ZMHandler(){
+
+    public SDS_ZMHandler qmf_apply_handler = new SDS_ZMHandler() {
         @Override
         public void onSuccess(String content) {
             super.onSuccess(content);
@@ -209,28 +213,33 @@ public class Tutor_Good_student extends AppCompatActivity {
                 Map map = (Map) personmessage2.get(i);
                 listmap.add(map);
             }
+
             for (Map ll : listmap){
+
+
                 Good_Student_Apply rr = new Good_Student_Apply();
-                Double qq = (Double) ll.get("leave_id");
+                Double qq = (Double) ll.get("goodStudent_id");
                 String ww = (String) ll.get("create_time");
                 String ee = (String) ll.get("student_name") ;
                 String tt = (String) ll.get("counserlor_name") ;
-                String yy = (String) ll.get("leave_content") ;
-                String uu = (String) ll.get("leave_begin") ;
-                String ii = (String) ll.get("leave_end") ;
-                String oo = (String) ll.get("leave_check") ;
+                String yy = (String) ll.get("trainee_achieve");
+                String uu = (String) ll.get("trainee_time");
+                String ii = (String) ll.get("trainee_reason");
+                String oo = (String) ll.get("gsapply_check");
+                String mm = (String) ll.get("apply_check");
                 rr.setGoodStudent_id(qq);
                 rr.setCreate_time(ww);
                 rr.setStudent_name(ee);
                 rr.setCounserlor_name(tt);
-                rr.setGs_apply_chieve(yy);
-                rr.setGs_apply_time(uu);
-                rr.setGs_apply_reason(ii);
-                rr.setLeave_check(oo);
-
+                rr.setTrainee_achieve(yy);
+                rr.setTrainee_time(uu);
+                rr.setTrainee_reason(ii);
+                rr.setGsapply_check(oo);
+                rr.setApply_check(mm);
+                //  Toast.makeText(Tutor_Good_student.this, uu.toString(), Toast.LENGTH_SHORT).show();
                 personmessage3.add(rr);
             }
-
+            //  Toast.makeText(Tutor_Good_student.this, personmessage3.get(0).toString(), Toast.LENGTH_SHORT).show();
             applyshow.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -245,6 +254,7 @@ public class Tutor_Good_student extends AppCompatActivity {
 
                 }
             });
+
         }
 
         @Override

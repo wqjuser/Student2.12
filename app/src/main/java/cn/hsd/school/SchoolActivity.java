@@ -1,5 +1,6 @@
 package cn.hsd.school;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,19 +9,29 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import cn.hsd.sett.SchsetActivity;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.gxq_class.gxqStatic;
 
 public class SchoolActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private TextView tv1;
+    private ImageView iv1;
+    private Button bt1;
+
+    private final int OPEN_RESULT = 1;
+    private final int PICK_RESULT = 2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +60,31 @@ public class SchoolActivity extends AppCompatActivity
         View headerView=navigationView.getHeaderView(0);
         tv1=(TextView)headerView.findViewById(R.id.hq_info_sch);
         tv1.setText(gxqStatic.info);
+        iv1 = (ImageView) headerView.findViewById(R.id.sch_iv);
+    }
+
+    public void camera(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(SchoolActivity.this);
+        builder.setTitle("选择拍照方式");
+        builder.setPositiveButton("本地图片", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, PICK_RESULT);
+
+            }
+        });
+        builder.setNegativeButton("相机拍照", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(
+                        android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, OPEN_RESULT);
+            }
+        });
+        builder.show();
     }
 
     @Override
@@ -101,6 +137,9 @@ public class SchoolActivity extends AppCompatActivity
             Intent intent3= new Intent(SchoolActivity.this,gxq_college_notes.class);
             startActivity(intent3);
 
+        } else if (id == R.id.sch_setting) {
+            Intent intent4 = new Intent(SchoolActivity.this, SchsetActivity.class);
+            startActivity(intent4);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

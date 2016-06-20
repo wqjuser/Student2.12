@@ -80,6 +80,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
                             username = tv1.getText().toString().trim();
                             gxqStatic.info = username;
                             password = tv2.getText().toString().trim();
+                            gxqStatic.pass = password;
                             YA_Login_model log_data = new YA_Login_model();
                             log_data.setUsername(username);
                             log_data.setPassword(password);
