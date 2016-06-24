@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Student</string>
+    <string name="app_name">欢迎使用学生端</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -12,7 +12,6 @@
         <item>校级管理员</item>
         <item>院级管理员</item>
     </string-array>
-    <string name="title_activity_test">TestActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="qmf_applytr">申请优秀实习生</string>
     <string name="qmf_applyname">申请人</string>
@@ -20,6 +19,10 @@
     <string name="qmf_applyachieve">成就</string>
     <string name="title_activity_qxx__write">Qxx_WriteActivity</string>
     <string name="title_activity_qxx__reply">Qxx_ReplyActivity</string>
+    <string name="title_activity_counsellor">欢迎使用辅导员端</string>
+    <string name="title_activity_Qxx_LeaveActivity">给学生留言</string>
+    <string name="title_activity_SchoolActivity">欢迎使用学校端</string>
+    <string name="title_activity_TutorActivity">欢迎使用指导老师端</string>
 
 
 </resources>

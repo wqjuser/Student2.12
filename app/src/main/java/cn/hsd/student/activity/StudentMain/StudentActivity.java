@@ -27,7 +27,7 @@ import cn.hsd.student.activity.gxq_class.gxqStatic;
 import cn.hsd.student.activity.leava.Gxq_apply_main;
 import cn.hsd.student.activity.logcat.sds_Logcat_Activity;
 import cn.hsd.student.activity.sqyxsxs.qmf_ApplyCon;
-import cn.hsd.student.message.Qxx_MessageActivity;
+import cn.hsd.student.message.Qxx_MessageMain;
 
 
 public class StudentActivity extends AppCompatActivity
@@ -171,11 +171,11 @@ public class StudentActivity extends AppCompatActivity
             startActivity(intent3);
 
         } else if (id == R.id.nav_share) {
-            Intent intent4 = new Intent(this, Qxx_MessageActivity.class);
+            Intent intent4 = new Intent(this, Qxx_MessageMain.class);
             startActivity(intent4);
 
         } else if (id == R.id.nav_send) {
-            Intent intent4 = new Intent(this, Qxx_MessageActivity.class);
+            Intent intent4 = new Intent(this, Qxx_MessageMain.class);
             startActivity(intent4);
 
         }

@@ -107,6 +107,8 @@ public class tutor_LeaveWord extends AppCompatActivity {
                 Dialog dialog = new Dialog(tutor_LeaveWord.this);
                 dialog.setContentView(R.layout.leaveword_dialog);
                 diago_lw=(EditText)dialog.findViewById(R.id.tutor_qmf_diago_lw) ;
+                date.setStudent_name(item.get("student_name").toString());
+                date.setStudent_no(item.get("student_no").toString());
                 date.setTutor_leaveword(diago_lw.getText().toString().trim());
                 dialog.setTitle("留言板");
                 dialog.show();

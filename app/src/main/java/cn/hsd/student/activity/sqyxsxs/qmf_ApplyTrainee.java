@@ -158,7 +158,7 @@ public class qmf_ApplyTrainee extends AppCompatActivity implements View.OnTouchL
                         String path = port.port+"/xsxs";
                         conn=new SDS_Httpclient();
                         apply_commit_model date =new apply_commit_model();
-                        date.setTrainee_name(student_name.getText().toString().trim());
+                        date.setStudent_name(student_name.getText().toString().trim());
                         date.setTrainee_achieve(apply_achieve.getText().toString().trim());
                         date.setTrainee_reason(apply_reason.getText().toString().trim());
                         date.setTrainee_time(apply_time.getText().toString().trim());

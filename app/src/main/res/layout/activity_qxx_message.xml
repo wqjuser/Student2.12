@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2F2F2"
-    tools:context=".message.Qxx_MessageActivity" >
+	tools:context=".message.Qxx_MessageActivity">
 <LinearLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
@@ -19,8 +19,8 @@
             android:layout_weight="6"
             android:layout_marginLeft="10dp"
         	android:layout_height="wrap_content"
-            android:background="#00ffffff"
         	android:text="请选择辅导员"
+			android:textColor="#ffffff"
             />
         <TextView 
             android:id="@+id/qxx_tv_clr"
@@ -28,6 +28,7 @@
             android:layout_weight="4"
         	android:layout_height="wrap_content"
         	android:layout_marginLeft="20dp"
+			android:textColor="#ffffff"
             />
 
        <ImageButton
@@ -39,9 +40,10 @@
 
     </LinearLayout>
     <ListView
-        android:id="@+id/listview"
+		android:id="@+id/qxx_listview"
         android:layout_width="fill_parent"
         android:layout_height="446.0dip"
+		android:layout_marginTop="15dip"
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/linear"
         android:listSelector="#00000000" />

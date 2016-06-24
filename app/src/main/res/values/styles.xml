@@ -86,7 +86,7 @@
     </style>
 
     <!-- 下圆角样式 -->
-    <style name="bottom_layout"  parent="base_layout">
+    <style name="bottom_layout" parent="base_layout">
         <item name="android:background">@drawable/bottom_layout_selector</item>
     </style>
 
@@ -95,7 +95,37 @@
         <item name="android:background">@drawable/single_layout_selector</item>
     </style>
 
+    <style name="radioButtonStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">5dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@drawable/rb_sds_color</item>
 
+    </style>
+
+    <style name="tab_item_text_style">
+        <item name="android:textSize">10.0dip</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="tab_item_background">
+        <item name="android:textAppearance">@style/tab_item_text_style</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/selector_tab_background2</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">3.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
 
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

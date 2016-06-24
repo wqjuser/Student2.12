@@ -102,6 +102,8 @@ public class tutor_mete_grade extends AppCompatActivity {
                 Dialog dialog = new Dialog(tutor_mete_grade.this);
                 dialog.setContentView(R.layout.metegrade_dialog);
                 dialog_mg=(EditText)dialog.findViewById(R.id.tutor_qmf_diago_mg) ;
+                date.setStudent_name(item.get("student_name").toString());
+                date.setStudent_no(item.get("student_no").toString());
                 date.setTutor_metegrade(dialog_mg.getText().toString().trim());
                 dialog.setTitle("成绩");
                 dialog.show();

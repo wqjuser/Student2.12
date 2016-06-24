@@ -1,57 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:descendantFocusability="blocksDescendants"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:descendantFocusability="blocksDescendants">
-
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <cn.hsd.student.message.Qxx_TopLine
+        android:textColor="#ffffff"
+        android:gravity="left" 
         android:id="@+id/qxx_changeTo"
+        android:background="@drawable/shapetop" 
         android:layout_width="300.0dip"
-        android:layout_height="25.0dip"
-        android:layout_centerHorizontal="true"
+        android:layout_height="25.0dip" 
         android:layout_marginTop="8.0dip"
-        android:background="@drawable/shapetop"
-        android:gravity="left"
-        android:textColor="#ffff0000" />
-
+        android:layout_centerHorizontal="true" />
     <cn.hsd.student.message.Qxx_TextViewLine
+        android:textSize="18.0sp" 
         android:id="@+id/qxx_changeContent"
+        android:background="@drawable/shapebody" 
         android:layout_width="300.0dip"
         android:layout_height="wrap_content"
+        android:minHeight="68.0dip"
         android:layout_below="@+id/qxx_changeTo"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/shapebody"
-        android:lineSpacingExtra="3.0dip"
-        android:minHeight="68.0dip"
-        android:textColor="#ff000000"
-        android:textSize="18.0sp" />
+        android:lineSpacingExtra="3.0dip" />
 
     <TextView
         android:id="@+id/qxx_changeDate"
-        android:layout_width="wrap_content"
-        android:layout_height="25.0dip"
-        android:layout_above="@+id/qxx_changeContent"
-        android:layout_alignRight="@+id/qxx_changeContent"
-        android:layout_marginRight="50dip"
         android:focusable="false"
-        android:textColor="#ffff0000" />
+        android:layout_width="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_height="25.0dip" 
+        android:layout_marginRight="50dip"
+        android:layout_above="@+id/qxx_changeContent"
+        android:layout_alignRight="@+id/qxx_changeContent" />
 
     <Button
         android:id="@+id/qxx_delete"
-        android:layout_width="27.0dip"
-        android:layout_height="27.0dip"
-        android:layout_above="@+id/qxx_changeContent"
-        android:layout_alignRight="@+id/qxx_changeContent"
-        android:layout_marginRight="7.0dip"
         android:background="@drawable/stylebutton2"
-        android:focusable="false" />
+        android:focusable="false" 
+        android:layout_width="27.0dip"
+        android:layout_height="27.0dip" 
+        android:layout_marginRight="7.0dip"
+        android:layout_above="@+id/qxx_changeContent"
+        android:layout_alignRight="@+id/qxx_changeContent" />
 
     <TextView
-        android:id="@+id/qxx_ifreply"
+        android:id="@+id/qxx_from"
         android:layout_width="300.0dip"
         android:layout_height="25.0dip"
-        android:layout_below="@+id/qxx_changeContent"
         android:layout_centerHorizontal="true"
         android:background="@drawable/shapebottom"
-        android:gravity="right" />
+        android:gravity="right"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/qxx_changeContent" />
 </RelativeLayout>

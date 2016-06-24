@@ -6,7 +6,16 @@ package cn.hsd.student.activity.model;
 public class apply_commit_model {
     private String content_neirong="";
     private String commit_name="";
-    private String trainee_name="";
+
+    public String getStudent_name() {
+        return student_name;
+    }
+
+    public void setStudent_name(String student_name) {
+        this.student_name = student_name;
+    }
+
+    private String student_name = "";
     private String trainee_reason="";
     private String trainee_achieve="";
     private  String trainee_time="";
@@ -26,13 +35,7 @@ public class apply_commit_model {
         this.commit_name = commit_name;
     }
 
-    public String getTrainee_name() {
-        return trainee_name;
-    }
 
-    public void setTrainee_name(String trainee_name) {
-        this.trainee_name = trainee_name;
-    }
 
     public String getTrainee_reason() {
         return trainee_reason;

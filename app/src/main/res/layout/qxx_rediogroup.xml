@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom">
+
+    <RadioGroup
+        android:id="@+id/qxx_radiogroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/tab_widget_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="2dip">
+
+        <RadioButton
+            android:id="@+id/RadioButton1"
+            style="@style/tab_item_background"
+            android:text="发送留言"
+            android:drawableTop="@drawable/send"
+            android:textSize="15sp"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/RadioButton2"
+            style="@style/tab_item_background"
+            android:text="接收留言"
+            android:drawableTop="@drawable/receive"
+            android:textSize="15sp"
+            android:textColor="#ffffff" />
+
+    </RadioGroup>
+
+</LinearLayout>

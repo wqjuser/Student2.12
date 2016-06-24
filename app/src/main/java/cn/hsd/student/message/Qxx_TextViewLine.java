@@ -22,8 +22,7 @@ public class Qxx_TextViewLine extends TextView{
 			float[] pts = { 15.0F, (i + 1) * getLineHeight(),
 					this.getWidth() - 20.0F, (i + 1) * getLineHeight() };
 
-			// i*50-280,50�������м���285�������߿��ϡ�
-			// canvas.drawLine(15, i*42, this.getWidth()-20,i*42, ePaint);
+
 			canvas.drawLines(pts, ePaint);
 		}
 		super.onDraw(canvas);

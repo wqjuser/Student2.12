@@ -16,12 +16,11 @@ public class Qxx_DrawLine extends EditText {
 		// TODO Auto-generated constructor stub
 		ePaint = new Paint();
 
-
+		// rect=new Rect();
 		ePaint.setColor(Color.BLACK);
 		ePaint.setStyle(Paint.Style.STROKE);
 
 	}
-
 
 
 	public void onDraw(Canvas canvas) {

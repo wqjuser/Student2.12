@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -63,7 +62,7 @@ public class Qxx_MessageAdapter extends BaseAdapter {
 			setShow.topView = (TextView) arg1.findViewById(R.id.qxx_topview);
 			setShow.dateview=(TextView) arg1.findViewById(R.id.qxx_dateview);
 			String str = (String) list.get(arg0).get("message_detail");
-			String str2=str.length()>10?" "+str.substring(0, 8):str;
+			String str2 = str.length() > 15 ? " " + str.substring(0, 8) : str;
 			String dateStr = (String) list.get(arg0).get("message_time");
 			String tonameStr=(String)list.get(arg0).get("message_receiveName");
 			String top="       To:    " + tonameStr;
@@ -81,31 +80,21 @@ public class Qxx_MessageAdapter extends BaseAdapter {
 			setShow.ctopView = (TextView) arg1
 					.findViewById(R.id.qxx_changeTo);
 			setShow.cdateview=(TextView)arg1.findViewById(R.id.qxx_changeDate);
-			setShow.ifreply=(TextView)arg1.findViewById(R.id.qxx_ifreply);
+			setShow.qxx_from = (TextView) arg1.findViewById(R.id.qxx_from);
 			final String str = (String) list.get(arg0).get("message_detail");
 			final String dateStr = (String) list.get(arg0).get("message_time");
 			final String tonameStr=(String)list.get(arg0).get("message_receiveName");
+			final String fromnameStr = (String) list.get(arg0).get("message_sendName");
 			final String top="       To:    " + tonameStr;
+			final String bottom = "       from:    " + fromnameStr + "       ";
 			setShow.cContentView.setText("" + str);
 			setShow.ctopView.setText(top);
 			setShow.cdateview.setText(dateStr);
-			setShow.ifreply.setText("未回复");
+			setShow.qxx_from.setText(bottom);
 			setShow.styleButtonDelete = (Button) arg1
 					.findViewById(R.id.qxx_delete);
 			setShow.styleButtonDelete
 					.setOnClickListener(new DeleteButtonListener(arg0));
-			setShow.ifreply.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View arg0) {
-
-					Intent intent=new Intent(context, Qxx_ReplyActivity.class);
-					intent.putExtra("toname", top);
-					intent.putExtra("todate", dateStr);
-					intent.putExtra("tocontent", str);
-					context.startActivity(intent);
-				}
-			});
 		}
 		return arg1;
 	}
@@ -126,7 +115,7 @@ public class Qxx_MessageAdapter extends BaseAdapter {
 
 			Builder builder = new Builder(context);
 			builder.setTitle("确定删除");
-			builder.setNegativeButton("删除",
+			builder.setNegativeButton("删除呀",
 					new DialogInterface.OnClickListener() {
 
 						@Override
@@ -159,7 +148,7 @@ public class Qxx_MessageAdapter extends BaseAdapter {
 		public TextView cdateview;
 		public Button styleButtonDelete;
 		public Button showButtonDelete;
-		public TextView ifreply;
+		public TextView qxx_from;
 	}
 
 }

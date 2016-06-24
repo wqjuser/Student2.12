@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context="cn.hsd.Counsellor.counsellor.Qxx_SginActivity">
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="#46a5ff">
+
+        <TextView
+            android:id="@+id/qxx_sg_name"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dip"
+            android:text="姓名" />
+
+        <TextView
+            android:id="@+id/qxx_sg_no"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="学号"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/qxx_sg_num"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:text="签到次数" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/qxx_lvSgin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayout2"
+        android:layout_marginTop="40dp"
+        android:background="#D5E9FD"
+        android:dividerHeight="10dip"
+        android:divider="#F2F2F2">
+
+
+    </ListView>
+
+</RelativeLayout>

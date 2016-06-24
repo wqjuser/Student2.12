@@ -43,8 +43,10 @@ public class Gxq_apply_message extends AppCompatActivity {
 
     private SDS_Httpclient conn;
     //private port port80;
-
-
+    public EditText et1;
+    public EditText et2;
+    public EditText daynum;
+    public TextView name1;
 
 
     public SDS_ZMHandler gxq_zmhandler = new SDS_ZMHandler(){
@@ -64,13 +66,18 @@ public class Gxq_apply_message extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gxq_apply_message);
         student1 = new Gxq_apply_student();
+        name1 = (TextView) findViewById(R.id.gxq_aqqlyname);
         apply_message_spinner = (Spinner) findViewById(R.id.gxq_aqqly_spinner);
         apply_message_systemtime = (TextView) findViewById(R.id.apply_message_systemtime);
         apply_message_begintimeshow = (EditText) findViewById(R.id.apply_message_begintimeshow);
         apply_message_overtimeshow = (EditText) findViewById(R.id.apply_message_overtimeshow);
         apply_message_because = (EditText) findViewById(R.id.apply_message_because);
+        et1 = (EditText) findViewById(R.id.esit1);
+        et2 = (EditText) findViewById(R.id.esit2);
+        daynum = (EditText) findViewById(R.id.daytime);
         //because = apply_message_because.getText().toString();
 
+        name1.setText(name);
         apply_message_begintimeshow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,7 +102,7 @@ public class Gxq_apply_message extends AppCompatActivity {
         str = formatter.format(curDate);
         apply_message_systemtime.setText(str);
 
-        final String[] apply_spinner = {"翟德斌", "姜涛", "仔仔"};
+        final String[] apply_spinner = {"事假", "病假"};
         ArrayAdapter<String> apply_message_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, apply_spinner);
         apply_message_spinner.setAdapter(apply_message_adapter);
         apply_message_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -122,8 +129,12 @@ public class Gxq_apply_message extends AppCompatActivity {
                 student1.setLeave_end(apply_message_overtimeshow.getText().toString());
                 student1.setStudent_name(name);
                 student1.setLeave_content(apply_message_because.getText().toString());
-                student1.setCounserlor_name(spinner);
+                student1.setCounserlor_name(et2.getText().toString());
+                student1.setAdviser_name(et1.getText().toString());//....................
                 student1.setLeave_check("未处理");
+                student1.setCreate_time(str);
+                student1.setLeave_type(spinner);
+                student1.setLeave_daynum(daynum.getText().toString());
                 gxqStatic.data = student1;
                 gxqStatic.apply_student_name = student1.getStudent_name();
                 new Thread(){

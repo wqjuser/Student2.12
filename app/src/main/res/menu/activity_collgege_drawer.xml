@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sds_teacher_leader"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="指导教师管理" />
+        <item
+            android:id="@+id/sds_teacher_model"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="辅导员管理" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="发表公告" />
+
+    </group>
+
+
+</menu>

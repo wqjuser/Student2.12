@@ -78,10 +78,7 @@
         <activity android:name="cn.hsd.tutor.cxsxzj.CksxzjActivity" />
         <activity android:name="cn.hsd.tutor.Stu_log.VistlogActivity" />
         <activity android:name=".activity.AboutUs.AboutUsActivity" />
-        <activity android:name=".message.Qxx_BaseActivity" />
-        <activity android:name=".message.Qxx_ReplyActivity" />
         <activity android:name=".message.Qxx_WriteActivity" />
-        <activity android:name=".message.Qxx_MessageActivity" />
         <activity android:name="cn.hsd.tutor.gxq_teacher.gxq_teacher_Activity" />
         <activity android:name="cn.hsd.tutor.gxq_teacher.Apply_gxqshow_Activity" />
         <activity android:name="cn.hsd.school.gxq_college_notes" />
@@ -99,7 +96,17 @@
         <activity android:name="cn.hsd.sett.SchsetActivity" />
         <activity android:name="cn.hsd.sett.ColsetActivity" />
         <activity android:name="cn.hsd.sett.TusetActivity" />
-        <activity android:name="cn.hsd.sett.FusetActivity"></activity>
+        <activity android:name="cn.hsd.sett.FusetActivity" />
+        <activity android:name=".message.Qxx_MessageActivity" />
+        <activity android:name=".message.Qxx_MessageMain" />
+        <activity android:name=".message.Qxx_ReceiveActivity"></activity>
+        <activity
+            android:name="cn.hsd.Counsellor.counsellor.CounsellorActivity"
+            android:label="@string/title_activity_counsellor"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_SginActivity" />
+        <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_LeaveActivity" />
+        <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_SginStudentActivity"></activity>
     </application>
 
 </manifest>
