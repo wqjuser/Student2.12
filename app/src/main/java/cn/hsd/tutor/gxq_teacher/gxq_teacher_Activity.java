@@ -84,7 +84,7 @@ public class gxq_teacher_Activity extends AppCompatActivity {
 public void connectserv(){
     new Thread(){
         public void run(){
-            String path = port.port+"/xsxs";
+            String path = port.port + "/studentname.action";
             conn = new SDS_Httpclient();
 
              conn.Postclient(path,"123",gxq_zmhandler);
@@ -94,7 +94,7 @@ public void connectserv(){
     public void connect(){
         new Thread(){
             public void run(){
-                String path = port.port+"/gxqxsxs";
+                String path = port.port + "/gxqxsxs.action";
                 conn = new SDS_Httpclient();
                 Signin_class data = new Signin_class();
                 json<Signin_class> dataVerture = new json<Signin_class>();

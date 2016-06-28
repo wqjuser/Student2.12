@@ -26,7 +26,7 @@ public class delete_college_manager extends AppCompatActivity {
     public void gxq_input(View view){
         new Thread(){
             public void run(){
-                String path = port.port+"/submitgonghao";
+                String path = port.port + "/submitgonghao.action";
                 SDS_Httpclient conn = new SDS_Httpclient();
                 conn.Postclient(path,gonghao.getText().toString(),gxq_delete_college);
             }

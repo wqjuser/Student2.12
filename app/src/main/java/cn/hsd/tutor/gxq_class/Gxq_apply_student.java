@@ -4,15 +4,15 @@ package cn.hsd.tutor.gxq_class;
  * Created by mona on 2016/5/1.
  */
 public class Gxq_apply_student {
-    public Double getLeave_id() {
+    public String getLeave_id() {
         return leave_id;
     }
 
-    public void setLeave_id(Double leave_id) {
+    public void setLeave_id(String leave_id) {
         this.leave_id = leave_id;
     }
 
-    public  Double leave_id = 1.0;
+    public String leave_id = "";
     public String create_time = "";    //请假表创建时间
     public  String student_name="";
     public  String counserlor_name="";

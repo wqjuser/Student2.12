@@ -52,7 +52,7 @@ public class Apply_gxqshow_Activity extends AppCompatActivity {
     public TextView endtime;
     public TextView apply_reason;
     public Button click_result;
-    public Double result_id;
+    public String result_id;
     public String check_result;
     private SDS_Httpclient conn;
     @Override
@@ -147,7 +147,7 @@ public class Apply_gxqshow_Activity extends AppCompatActivity {
     public void connect_tijiao(){
         new Thread(){
             public void run(){
-                String path = port.port+"/submitxsxs";
+                String path = port.port + "/subteachermodify.action";
                 conn = new SDS_Httpclient();
                Gxq_apply_student data = new Gxq_apply_student();
                 data.setLeave_id(result_id);
@@ -162,7 +162,7 @@ public class Apply_gxqshow_Activity extends AppCompatActivity {
 public void connect_studentname(){
     new Thread(){
         public void run(){
-            String path = port.port+"/xsxs";
+            String path = port.port + "/studentname.action";
             conn = new SDS_Httpclient();
 //            Signin_class data = new Signin_class();
 //            json<Signin_class> dataVerture = new json<Signin_class>();
@@ -196,8 +196,8 @@ public void connect_studentname(){
     public void connect_apply(){
         new Thread(){
             public void run(){
-                String path = port.port+"/apply";
-                conn.Postclient(path,"123",gxq_apply_handler);
+                String path = port.port + "/apply.action";
+                conn.Postclient(path, "qq", gxq_apply_handler);
             }
         }.start();
     }
@@ -217,7 +217,7 @@ public void connect_studentname(){
             }
             for (Map ll : listmap){
                 Gxq_apply_student rr = new Gxq_apply_student();
-                Double qq = (Double) ll.get("leave_id");
+                String qq = (String) ll.get("leave_id");
                 String ww = (String) ll.get("create_time");
                 String ee = (String) ll.get("student_name") ;
                 String tt = (String) ll.get("counserlor_name") ;
@@ -225,7 +225,7 @@ public void connect_studentname(){
                 String uu = (String) ll.get("leave_begin") ;
                 String ii = (String) ll.get("leave_end") ;
                 String oo = (String) ll.get("leave_check") ;
-                 rr.setLeave_id(qq);
+                rr.setLeave_id(qq);
                 rr.setCreate_time(ww);
                 rr.setStudent_name(ee);
                 rr.setCounserlor_name(tt);

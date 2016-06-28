@@ -139,7 +139,7 @@ public class Gxq_apply_message extends AppCompatActivity {
                 gxqStatic.apply_student_name = student1.getStudent_name();
                 new Thread(){
                     public void run(){
-                        String path = port.port+"/xsxs";
+                        String path = port.port + "/leavemessage.action";
                         conn = new SDS_Httpclient();
                         Gxq_apply_student data = new Gxq_apply_student();
                         json<Gxq_apply_student> dataVerture = new json<Gxq_apply_student>();
