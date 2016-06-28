@@ -2,9 +2,7 @@ package cn.hsd.Counsellor.counsellor;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,13 +10,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import cn.hsd.college.model.gonge_gonggao;
 import cn.hsd.student.R;
-import cn.hsd.student.message.Qxx_MessageMain;
 
 public class CounsellorActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private ListView listview;
+    private List<gonge_gonggao> list1;
+    private List<Map> list2;
+    private ArrayList<HashMap<String, Object>> listItem;
+
+    private final int OPEN_RESULT = 1;
+    private final int PICK_RESULT = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +37,16 @@ public class CounsellorActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -71,7 +83,8 @@ public class CounsellorActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.cougg) {
+
             return true;
         }
 
@@ -89,7 +102,7 @@ public class CounsellorActivity extends AppCompatActivity
             startActivity(intent1);
 
         } else if (id == R.id.nav_gallery) {
-            Intent intent2 = new Intent(CounsellorActivity.this, Qxx_MessageMain.class);
+            Intent intent2 = new Intent(CounsellorActivity.this, Qxx_counselorMainActivity.class);
             startActivity(intent2);
 
         } else if (id == R.id.nav_slideshow) {

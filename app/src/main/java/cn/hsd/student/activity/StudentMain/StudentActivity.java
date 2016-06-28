@@ -43,7 +43,6 @@ public class StudentActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
-        tv1=(TextView)findViewById(R.id.hq_info_stu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -130,7 +129,7 @@ public class StudentActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.student, menu);
-       //tv1.setText("2222222");
+        //tv1.setText("2222222");
 
         return true;
     }

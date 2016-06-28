@@ -150,21 +150,21 @@ public class Qxx_SginStudentActivity extends Activity {
                     dialog();
                 } else {
                     Builder builder = new Builder(Qxx_SginStudentActivity.this);
-                    builder.setTitle("�Ƿ��޸ĸ������ڳɼ���");
+                    builder.setTitle("是否修改该学生的出勤成绩？");
 //					builder.setIcon(R.drawable.ic_launcher);
-                    builder.setNegativeButton("ȷ��", new DialogInterface.OnClickListener() {
+                    builder.setNegativeButton("确定", new DialogInterface.OnClickListener() {
 
                         @Override
                         public void onClick(DialogInterface arg0, int arg1) {
-                            // TODO �Զ����ɵķ������
+
                             dialog();
                         }
                     });
-                    builder.setPositiveButton("ȡ��", new DialogInterface.OnClickListener() {
+                    builder.setPositiveButton("取消", new DialogInterface.OnClickListener() {
 
                         @Override
                         public void onClick(DialogInterface arg0, int arg1) {
-                            // TODO �Զ����ɵķ������
+
 
                         }
                     });
@@ -178,11 +178,11 @@ public class Qxx_SginStudentActivity extends Activity {
     @SuppressWarnings("deprecation")
     public void dialog() {
         final AlertDialog dialog = new Builder(Qxx_SginStudentActivity.this).create();
-        dialog.setTitle("��Ϊ��ѧ���������ڷ֣�");
+        dialog.setTitle("请为此学生评定出勤成绩");
         final EditText eText = new EditText(Qxx_SginStudentActivity.this);
 //		dialog.setIcon(R.drawable.ic_launcher);
         dialog.setView(eText);
-        dialog.setButton("ȷ��", new DialogInterface.OnClickListener() {
+        dialog.setButton("确定", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
@@ -192,11 +192,11 @@ public class Qxx_SginStudentActivity extends Activity {
                 if (et_score.matches("\\d+(.\\d+)?") && Float.parseFloat(et_score) <= 100) {
                     insert();
                 } else {
-                    Toast.makeText(getApplicationContext(), "������<=100����Ч��ֵ������", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "请输入<=100的有效数值分数！", Toast.LENGTH_LONG).show();
                 }
             }
         });
-        dialog.setButton2("ȡ��", new DialogInterface.OnClickListener() {
+        dialog.setButton2("取消", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
@@ -218,7 +218,7 @@ public class Qxx_SginStudentActivity extends Activity {
 
             public void run() {
 
-                String path = port.port + "/sgin_score";
+                String path = port.port + "/sgin_score.action";
                 SDS_Httpclient conn = new SDS_Httpclient();//��ȡ����
                 json<Qxx_SginScore> returnjson = new json<Qxx_SginScore>();//new һ��json����
                 String data = returnjson.ObjectToJson1(SginScore);
@@ -227,7 +227,7 @@ public class Qxx_SginStudentActivity extends Activity {
 
 
         }.start();
-        Toast.makeText(getApplicationContext(), "��ѧ���ĳ��ڳɼ�Ϊ" + et_score + "��", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "该学生的出勤成绩为：" + et_score + "��", Toast.LENGTH_LONG).show();
 
     }
 
@@ -245,7 +245,7 @@ public class Qxx_SginStudentActivity extends Activity {
 
             public void run() {
 
-                String path = port.port + "/qxx_sgin";
+                String path = port.port + "/qxx_sgin.action";
 
                 SDS_Httpclient conn = new SDS_Httpclient();//��ȡ����
                 conn.Postclient(path, "", handler); //��post�����ύ����

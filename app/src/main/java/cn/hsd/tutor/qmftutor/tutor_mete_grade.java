@@ -88,7 +88,7 @@ public class tutor_mete_grade extends AppCompatActivity {
 
             public void run() {
 
-                String path = port.port+"/mgxsxs";
+                String path = port.port + "/getmgroll.action";
                 conn = new SDS_Httpclient();
                 conn.Postclient(path, "", sds_zmhandler);
             }
@@ -126,7 +126,7 @@ public class tutor_mete_grade extends AppCompatActivity {
 
     public void qmf_mgrefer(View view) {
         //上传到服务器
-
+        date.setTutor_metegrade(dialog_mg.getText().toString().trim());
         new Thread() {
 
             public void run() {
@@ -134,7 +134,7 @@ public class tutor_mete_grade extends AppCompatActivity {
 
                 //  Toast.makeText(getApplicationContext(),nameet.getText().toString(),Toast.LENGTH_LONG).show();
 
-                String path = port.port+"/lwxsxs";
+                String path = port.port + "/getmg.action";
                 conn = new SDS_Httpclient();
                 json<tutor_mg_refer> dataVerture = new json<tutor_mg_refer>();
                 String returnJson = dataVerture.ObjectToJson1(date);

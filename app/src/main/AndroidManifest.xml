@@ -20,6 +20,11 @@
     <!-- SD卡读取权限，用户写入离线定位数据 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -99,14 +104,24 @@
         <activity android:name="cn.hsd.sett.FusetActivity" />
         <activity android:name=".message.Qxx_MessageActivity" />
         <activity android:name=".message.Qxx_MessageMain" />
-        <activity android:name=".message.Qxx_ReceiveActivity"></activity>
+        <activity android:name=".message.Qxx_ReceiveActivity" />
         <activity
             android:name="cn.hsd.Counsellor.counsellor.CounsellorActivity"
             android:label="@string/title_activity_counsellor"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_SginActivity" />
         <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_LeaveActivity" />
-        <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_SginStudentActivity"></activity>
+        <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_SginStudentActivity" />
+        <activity
+            android:name="cn.hsd.college.CollgegeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="cn.hsd.college.google_fabiao" />
+        <activity android:name="cn.hsd.college.teacher_sds_leader" />
+
+        <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_counselorMgeReceiveActivity" />
+        <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_counselorMainActivity" />
+        <activity android:name="cn.hsd.Counsellor.counsellor.Qxx_counselorMgeActivity" />
+        <activity android:name="cn.hsd.college.coach_teacher"></activity>
     </application>
 
 </manifest>

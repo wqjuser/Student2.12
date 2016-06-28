@@ -97,7 +97,7 @@ public class Qxx_WriteActivity extends Qxx_BaseActivity {
 
 					public void run() {
 
-						String path = port.port + "/qjqxsxs";
+						String path = port.port + "/qxx_message.action";
 
 
 						SDS_Httpclient conn = new SDS_Httpclient();//��ȡ����

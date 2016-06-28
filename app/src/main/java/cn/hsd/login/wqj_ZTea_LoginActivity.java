@@ -57,7 +57,7 @@ public class wqj_ZTea_LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_ztea__login);
-        wqj_zt_bt = (Button) findViewById(R.id.wqj_zt_log_button);
+        wqj_zt_bt = (Button) findViewById(R.id.wqj_ztea_log_button);
 //        button.setOnClickListener(new StuBtuOnClickListener());
         tv1 = (TextView) findViewById(R.id.username_edit);
         tv2 = (TextView) findViewById(R.id.password_edit);
@@ -67,7 +67,7 @@ public class wqj_ZTea_LoginActivity extends AppCompatActivity {
                 if (tv1.length() == 0 && tv2.length() == 0) {
                     Toast.makeText(wqj_ZTea_LoginActivity.this, "工号或密码不能为空", Toast.LENGTH_LONG).show();
 
-                } else if (tv1.length() < 13) {
+                } else if (tv1.length() < 6) {
                     Toast.makeText(wqj_ZTea_LoginActivity.this, "工号错误或者格式不正确", Toast.LENGTH_LONG).show();
                 } else if (tv2.length() < 6) {
                     Toast.makeText(wqj_ZTea_LoginActivity.this, "密码错误", Toast.LENGTH_LONG).show();
@@ -75,7 +75,7 @@ public class wqj_ZTea_LoginActivity extends AppCompatActivity {
                 } else {
                     new Thread() {
                         public void run() {
-                            String path = port.port+"/StuLoginServlet";
+                            String path = port.port + "/login.action";
                             username = tv1.getText().toString().trim();
                             gxqStatic.info = username;
                             password = tv2.getText().toString().trim();

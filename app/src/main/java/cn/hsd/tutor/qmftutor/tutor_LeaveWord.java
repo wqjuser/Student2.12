@@ -90,7 +90,7 @@ public class tutor_LeaveWord extends AppCompatActivity {
 
             public void run() {
 
-                String path = port.port+"/qmfxsxs";
+                String path = port.port + "/getlwroll.action";
                 conn = new SDS_Httpclient();
                 conn.Postclient(path, "123", sds_zmhandler);
             }
@@ -130,7 +130,7 @@ public class tutor_LeaveWord extends AppCompatActivity {
     };
     public void qmf_lwrefer(View view) {
         //上传到服务器
-
+        date.setTutor_leaveword(diago_lw.getText().toString().trim());
 
         new Thread() {
 
@@ -139,7 +139,7 @@ public class tutor_LeaveWord extends AppCompatActivity {
 
 //               Toast.makeText(tutor_LeaveWord.this,"连服务器",Toast.LENGTH_LONG).show();
 
-                String path = port.port+"/lwxsxs";
+                String path = port.port + "/getlw.action";
                 conn = new SDS_Httpclient();
                 json<tutor_lw_refer> dataVerture = new json<tutor_lw_refer>();
                 String returnJson = dataVerture.ObjectToJson1(date);

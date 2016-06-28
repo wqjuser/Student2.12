@@ -136,7 +136,7 @@ public class Qxx_ReceiveActivity extends Activity {
 
             public void run() {
 
-                String path = port.port + "/qjqxsxs";
+                String path = port.port + "/qxx_message.action";
 
                 SDS_Httpclient conn = new SDS_Httpclient();//��ȡ����
                 conn.Postclient(path, "123", handler2); //��post�����ύ����

@@ -68,7 +68,7 @@ public class TusetActivity extends AppCompatActivity {
         } else {
             new Thread() {
                 public void run() {
-                    String path = port.port + "/Tuset";
+                    String path = port.port + "/Tuset.action";
                     setmodel set = new setmodel();
                     set.setPass1(pass1);
                     set.setPass2(pass2);

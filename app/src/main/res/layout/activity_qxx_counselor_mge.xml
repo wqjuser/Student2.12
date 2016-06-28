@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context="cn.hsd.Counsellor.counsellor.Qxx_counselorMainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:background="#00aaff">
+
+        <Button
+            android:id="@+id/qxx_select_Bt2"
+            android:layout_width="0dip"
+            android:layout_weight="6"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="请选择学生"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/qxx_tv_clr2"
+            android:layout_width="0dip"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/qxx_img2"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.00"
+            android:background="@drawable/smallbutton1" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/qxx_listview2"
+        android:layout_width="fill_parent"
+        android:layout_height="446.0dip"
+        android:layout_marginTop="15dip"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linear"
+        android:listSelector="#00000000" />
+
+
+</RelativeLayout>

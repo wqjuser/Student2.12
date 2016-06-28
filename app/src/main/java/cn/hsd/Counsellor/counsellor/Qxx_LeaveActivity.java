@@ -142,7 +142,7 @@ public class Qxx_LeaveActivity extends Activity {
 
             public void run() {
 
-                String path = port.port + "/leave";
+                String path = port.port + "/qxx_leave.action";
 
                 SDS_Httpclient conn = new SDS_Httpclient();//��ȡ����
                 conn.Postclient(path, "", handler); //��post�����ύ����

@@ -67,7 +67,7 @@ public class ColsetActivity extends AppCompatActivity {
         } else {
             new Thread() {
                 public void run() {
-                    String path = port.port + "/Colset";
+                    String path = port.port + "/Colset.action";
                     pass1 = tv1.getText().toString().trim();
                     pass2 = tv2.getText().toString().trim();
                     pass3 = tv3.getText().toString().trim();

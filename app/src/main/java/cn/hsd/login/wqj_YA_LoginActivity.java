@@ -10,9 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import PORT.port;
+import cn.hsd.college.CollgegeActivity;
 import cn.hsd.student.R;
 import cn.hsd.student.activity.Json.json;
-import cn.hsd.student.activity.StudentMain.StudentActivity;
 import cn.hsd.student.activity.gxq_class.gxqStatic;
 import cn.hsd.student.activity.model.YA_Login_model;
 import cn.hsd.student.activity.service.SDS_Httpclient;
@@ -32,7 +32,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
             if ("1".equals(content)) {
                 //SpTools.getBooleans(getApplicationContext(), Mycontents.ISSETUP, false);
                 Toast.makeText(wqj_YA_LoginActivity.this, "登陆成功", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(wqj_YA_LoginActivity.this, StudentActivity.class);
+                Intent intent = new Intent(wqj_YA_LoginActivity.this, CollgegeActivity.class);
                 startActivity(intent);
 
 
@@ -64,8 +64,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
                 if (tv1.length() == 0 && tv2.length() == 0) {
                     Toast.makeText(wqj_YA_LoginActivity.this,"工号或密码不能为空",Toast.LENGTH_LONG).show();
 
-                }
-                else if (tv1.length()<13){
+                } else if (tv1.length() < 6) {
                     Toast.makeText(wqj_YA_LoginActivity.this,"工号错误或者格式不正确",Toast.LENGTH_LONG).show();
                 }
                 else if (tv2.length()<6){
@@ -76,7 +75,7 @@ public class wqj_YA_LoginActivity extends AppCompatActivity {
 
                     new Thread() {
                         public void run() {
-                            String path = port.port+"/StuLoginServlet";
+                            String path = port.port + "/login.action";
                             username = tv1.getText().toString().trim();
                             gxqStatic.info = username;
                             password = tv2.getText().toString().trim();

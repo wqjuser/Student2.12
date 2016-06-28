@@ -90,45 +90,45 @@ public class wqj_Stu_LoginActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 //
         setContentView(R.layout.activity_stu__login);
-        //sp = this.getSharedPreferences("ifFirst", 1);
+
         tv1 = (TextView) findViewById(R.id.username_edit);
         tv2 = (TextView) findViewById(R.id.password_edit);
         wqj_stu_bt = (Button) findViewById(R.id.wqj_stu_log_button);
-        wqj_stu_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                if (tv1.length() == 0 || tv2.length() == 0) {
 
-                    Toast.makeText(wqj_Stu_LoginActivity.this, "账号或密码不能为空", Toast.LENGTH_LONG).show();
-                } else if (tv1.length() < 10) {
-                    Toast.makeText(wqj_Stu_LoginActivity.this, "学号格式不正确", Toast.LENGTH_LONG).show();
-                } else if (tv2.length() < 6) {
-                    Toast.makeText(wqj_Stu_LoginActivity.this, "密码不正确或者格式错误", Toast.LENGTH_LONG).show();
-                } else {
+    }
 
-                    new Thread() {
-                        public void run() {
-                            String path = port.port + "/StuLoginServlet";
-                            username = tv1.getText().toString().trim();
-                            gxqStatic.info = username;
-                            password = tv2.getText().toString().trim();
-                            gxqStatic.pass = password;
-                            Stu_Login_model log_data = new Stu_Login_model();
-                            log_data.setUsername(username);
-                            log_data.setPassword(password);
-                            json<Stu_Login_model> json = new json<Stu_Login_model>();
-                            String infoResult = json.ObjectToJson1(log_data);
-                            SDS_Httpclient conn = new SDS_Httpclient();
-                            conn.Postclient(path, infoResult, handler);
+    public void stu_login(View v) {
 
-                        }
-                    }.start();
+        if (tv1.length() == 0 || tv2.length() == 0) {
+
+            Toast.makeText(wqj_Stu_LoginActivity.this, "账号或密码不能为空", Toast.LENGTH_LONG).show();
+        } else if (tv1.length() < 10) {
+            Toast.makeText(wqj_Stu_LoginActivity.this, "学号格式不正确", Toast.LENGTH_LONG).show();
+        } else if (tv2.length() < 6) {
+            Toast.makeText(wqj_Stu_LoginActivity.this, "密码不正确或者格式错误", Toast.LENGTH_LONG).show();
+        } else {
+
+            new Thread() {
+                public void run() {
+                    String path = port.port + "/login.action";
+                    username = tv1.getText().toString().trim();
+                    gxqStatic.info = username;
+                    password = tv2.getText().toString().trim();
+                    gxqStatic.pass = password;
+                    Stu_Login_model log_data = new Stu_Login_model();
+                    log_data.setUsername(username);
+                    log_data.setPassword(password);
+                    json<Stu_Login_model> json = new json<Stu_Login_model>();
+                    String infoResult = json.ObjectToJson1(log_data);
+                    SDS_Httpclient conn = new SDS_Httpclient();
+                    conn.Postclient(path, infoResult, handler);
 
                 }
+            }.start();
 
-            }
-        });
+        }
+
     }
 }
 

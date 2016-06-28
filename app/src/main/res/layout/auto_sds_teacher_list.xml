@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/teacher_list_shape"
+
+    >
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sds_teacher_list_biankuang"
+        android:layout_margin="0.5dip">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="姓名：" />
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/techer_list_name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="密码：" />
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/techer_list_sax"
+            android:textSize="20dp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sds_teacher_list_biankuang"
+        android:layout_margin="0.5dip">
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="20dp"
+            android:text="工号：" />
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/techer_list_tno"
+            android:textSize="20dp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="20dp"
+            android:text="带领专业：" />
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/techer_list_leader_zhuanye"
+            android:textSize="20dp" />
+
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sds_teacher_list_biankuang"
+        android:layout_margin="0.5dip">
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="20dp"
+            android:text="带领年级：" />
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/techer_list_leader_nianji"
+            android:textSize="20dp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sds_teacher_list_biankuang"
+        android:layout_margin="0.5dip">
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="20dp"
+            android:text="邮箱：" />
+
+        <TextView
+            android:background="@drawable/sds_teacher_list_biankuang"
+            android:layout_margin="0.5dip"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/techer_list_leader_pici"
+            android:textSize="20dp" />
+
+    </TableRow>
+</TableLayout>

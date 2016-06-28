@@ -66,7 +66,7 @@ public class SchsetActivity extends AppCompatActivity {
             new Thread() {
                 public void run() {
 
-                    String path = port.port + "/Schset";
+                    String path = port.port + "/Schset.action";
                     pass1 = tv1.getText().toString().trim();
                     pass2 = tv2.getText().toString().trim();
                     pass3 = tv3.getText().toString().trim();

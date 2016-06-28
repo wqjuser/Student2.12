@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.hsd.college.coach_teacher">
+
+    <cn.hsd.college.tcatch.basefragment.noSclipingMenu1
+        android:id="@+id/vp_main_content_pages1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.73">
+
+
+    </cn.hsd.college.tcatch.basefragment.noSclipingMenu1>
+
+
+    <RadioGroup
+        android:id="@+id/rg_content_radios1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_tab_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_main_content_home1"
+            style="@style/radioButtonStyle"
+            android:drawableTop="@drawable/rb_home_selector"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_main_content_seting1"
+            style="@style/radioButtonStyle"
+            android:drawableTop="@drawable/rb_seting_selector"
+            android:text="辅导员列表" />
+
+
+        <RadioButton
+            android:id="@+id/rb_main_content_newscenter1"
+            style="@style/radioButtonStyle"
+            android:drawableTop="@drawable/rb_newscenter_selector"
+            android:text="增加辅导员" />
+
+        <RadioButton
+            android:id="@+id/rb_main_content_smartservice1"
+            style="@style/radioButtonStyle"
+            android:drawableTop="@drawable/rb_smartcenter_selector"
+            android:text="删除辅导员" />
+
+        <RadioButton
+            android:id="@+id/rb_main_content_fovaffirs1"
+            style="@style/radioButtonStyle"
+            android:drawableTop="@drawable/rb_govaffvocer_selector"
+            android:text="修改辅导员" />
+
+
+    </RadioGroup>
+</LinearLayout>

@@ -53,7 +53,7 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_ftea__login);
-        wqj_ft_bt=(Button)findViewById(R.id.wqj_ft_log_button);
+        wqj_ft_bt = (Button) findViewById(R.id.wqj_ftea_log_button);
         tv1=(TextView)findViewById(R.id.username_edit);
         tv2=(TextView)findViewById(R.id.password_edit);
         wqj_ft_bt.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +71,7 @@ public class wqj_FTea_LoginActivity extends AppCompatActivity {
 
                     new Thread() {
                         public void run() {
-                            String path = port.port+"/StuLoginServlet";
+                            String path = port.port + "/login.action";
                             username = tv1.getText().toString().trim();
                             gxqStatic.info = username;
                             password = tv2.getText().toString().trim();

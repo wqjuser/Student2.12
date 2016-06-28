@@ -122,7 +122,7 @@ public class Qxx_SginActivity extends Activity {
 
             public void run() {
 
-                String path = port.port + "/sgin_student";
+                String path = port.port + "/sgin_student.action";
 
                 SDS_Httpclient conn = new SDS_Httpclient();//��ȡ����
                 conn.Postclient(path, "", handler); //��post�����ύ����

@@ -66,7 +66,7 @@ public class wqj_XA_LoginActivity extends AppCompatActivity {
                 if (tv1.length() == 0 && tv2.length() == 0) {
                     Toast.makeText(wqj_XA_LoginActivity.this, "工号或密码不能为空", Toast.LENGTH_LONG).show();
 
-                } else if (tv1.length() < 13) {
+                } else if (tv1.length() < 6) {
                     Toast.makeText(wqj_XA_LoginActivity.this, "工号错误或者格式不正确", Toast.LENGTH_LONG).show();
                 } else if (tv2.length() < 6) {
                     Toast.makeText(wqj_XA_LoginActivity.this, "密码错误", Toast.LENGTH_LONG).show();
@@ -75,7 +75,7 @@ public class wqj_XA_LoginActivity extends AppCompatActivity {
 
                     new Thread() {
                         public void run() {
-                            String path = port.port+"/StuLoginServlet";
+                            String path = port.port + "/login.action";
                             username = tv1.getText().toString().trim();
                             gxqStatic.info = username;
                             password = tv2.getText().toString().trim();

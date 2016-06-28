@@ -78,7 +78,7 @@ public class VistlogActivity extends AppCompatActivity {
     public void ensure(View v) {
         new Thread() {
             public void run() {
-                String path = port.port + "/Stu_log";
+                String path = port.port + "/Stu_log.action";
                 studentnumber = et1.getText().toString().trim();
                 stu_log_model log = new stu_log_model();
                 log.setStudent_no(studentnumber);

@@ -107,7 +107,7 @@ public class InfoActivity extends AppCompatActivity {
         else {
             new Thread() {
                 public void run() {
-                    String path = port.port+"/Infoxsxs";
+                    String path = port.port + "/info.action";
                     intership_name = et1.getText().toString().trim();
                     intership_major = et2.getText().toString().trim();
                     intership_train = et3.getText().toString().trim();

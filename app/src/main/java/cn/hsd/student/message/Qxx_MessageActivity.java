@@ -200,7 +200,7 @@ public class Qxx_MessageActivity extends Activity {
 
 					public void run() {
 
-						String path = port.port + "/counsellor";
+						String path = port.port + "/qxx_counselor.action";
 
 						SDS_Httpclient conn = new SDS_Httpclient();
 						conn.Postclient(path, "", handler);
@@ -233,7 +233,7 @@ public class Qxx_MessageActivity extends Activity {
 
 			public void run() {
 
-				String path = port.port + "/qjqxsxs";
+				String path = port.port + "/qxx_message.action";
 
 				SDS_Httpclient conn = new SDS_Httpclient();
 				conn.Postclient(path, "", handler2);
